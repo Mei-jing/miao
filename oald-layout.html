@@ -7,38 +7,35 @@
   <style>
 
 	*{
-		box-sizing:border-box;
+		box-sizing:inherit;
 		margin:0;
 		padding:0;
+	}
+
+	html,body{
+		width: 100%;
+		height: 100%;
 	}
 
 	div.all{
 		font-size:0;
-		xwidth:1920px;
 		width: 100%;
 		height:100%;
-		margin:0;
-		padding:0;
-		display:block;
 		min-width: 700px;
 	}
 
-	p{
-		font-size:16px;
-	}
-
-	section{
-		font-size:16px;
+	div.all > *{
+		font-size: initial;
+		display: inline-block;
+		border-right: 1px solid;
+		box-sizing: border-box;
 	}
 
 	p.one{
 		width:200px;
-		height:1200px;
-		border:3px solid;
+		height:100%;
 		overflow:auto;
-		display:inline-block;
-		overflow:auto;
-		border-right:hidden;
+		background-color: red;
 	}
 
 	/* p.two{
@@ -52,60 +49,53 @@
 	} */
 
 	div.section{
-		display:inline-block;
+		height: 100%;
 		width:calc(100% - 600px);
 		vertical-align:top;
-		min-width: 100px;
+		xmin-width: 200px;
 	}
 
 	section.top{
-		xwidth:calc(100% - 600px);
-		height:200px;
-		border:3px solid;
-		overflow:auto;
-		xoverflow:hidden;
-		border-bottom:hidden;
+		height:20%;
+		background-color: violet;
+		overflow: auto;
 	}
 
 	section.bottom{
-		xwidth:calc(100% - 600px);
-		height:1000px;
-		border:3px solid;
+		height:80%;
+		background-color: yellow;
+		overflow: auto;
+	}
+
+	p.three{
+		width:200px;
+		height:100%;
+		vertical-align:top;
 		overflow:auto;
+		background-color: green;
 	}
 
 	p.four{
 		width:200px;
-		height:1200px;
-		border:3px solid;
-		display:inline-block;
+		height:100%;
 		vertical-align:top;
 		overflow:auto;
-		border-left:hidden;
-	}
-
-	p.five{
-		width:200px;
-		height:1200px;
-		border:3px solid;
-		display:inline-block;
-		vertical-align:top;
-		overflow:auto;
-		border-left:hidden;
+		background-color: grey;
+		border-right: none;
 	}
   </style>
 </head>
 <body>
 	<div class="all">
 		<p class="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni praesentium modi eaque asperiores quod, accusantium omnis officiis numquam, soluta perferendis dolorum enim vel, id ducimus sapiente. Tempora voluptas ullam voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit labore amet sapiente commodi corporis sed cumque magnam a fugiat, suscipit, accusantium optio, repudiandae esse deleniti dolores nostrum necessitatibus, ab ullam.</p>
-		<div class="section">
+	<div class="section">
 		<p class="two">
 		<section class="top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo nobis, quam ex impedit quaerat repudiandae in officia, tenetur, perferendis harum quas, est dolores quibusdam libero quis iure facere veritatis molestias.</section>
 		<section class="bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique voluptatum ullam, commodi excepturi quod alias. Saepe itaque necessitatibus ullam, soluta incidunt veritatis voluptatem ea animi dignissimos. Aperiam, dignissimos accusamus recusandae?</section>
 		</p>
 	</div>
-		<p class="four">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur quae obcaecati officia, culpa ipsam officiis quod repudiandae, veritatis cumque architecto impedit. Pariatur odit omnis repellendus explicabo recusandae iste eos.</p>
-		<p class="five">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat atque dolor eos provident reiciendis tenetur a, excepturi porro voluptatem illum laborum libero, culpa earum voluptate minus quibusdam cumque alias ducimus.</p>
+		<p class="three">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur quae obcaecati officia, culpa ipsam officiis quod repudiandae, veritatis cumque architecto impedit. Pariatur odit omnis repellendus explicabo recusandae iste eos.</p>
+		<p class="four">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat atque dolor eos provident reiciendis tenetur a, excepturi porro voluptatem illum laborum libero, culpa earum voluptate minus quibusdam cumque alias ducimus.</p>
 	</div>
 </body>
 </html>
