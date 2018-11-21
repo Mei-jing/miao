@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ios-checkbox.html</title>
+	<style>
+	/*第一种方法：伪元素*/
+		label.alpha{
+			display: inline-block;
+			width: 100px;
+			height: 50px;
+			background-color:#dddddd;
+			border:1px solid #dddddd;
+			border-radius: 51px; 
+		}
+
+		input.first:checked + label.alpha{
+			background-color:#6edd5e;
+		}
+
+		input.first:checked + label.alpha::before{
+			left: 50%;
+		}
+
+		label.alpha::before{
+			position: relative;
+			content: "";
+			display: block;
+			width:50%;
+			height: 100%;
+			background-color: white;
+			border:1px solid #dddddd;
+			border-radius: 51px;
+		}
+
+		/*第二种方法：改变元素位置*/
+		label.beta{
+  			position:absolute;
+  			display:inline-block;
+  			width: 100px;
+  			height: 50px;
+  			background-color: #dddddd;
+  			border-radius: 50px;
+  			xtransition: 1s;
+		}
+
+		span{
+  			display:inline-block;
+			width: 50px;
+  			height: 50px;
+			xright:0;
+ 			left: 0;
+  			background-color: white;
+  			border-radius: 50px;
+  			position:relative;
+			transition:0.5s
+		}
+
+		input.second:checked + label.beta{
+			background-color:#6edd5e
+		}
+
+		input.second:checked + label.beta span{
+  			position:relative;
+ 			xright: -50px;
+			left:50px;
+			transition: 0.5s;
+			}
+
+
+	</style>
+</head>
+<body>
+	<input class="first" type="checkbox" id="iOSbutton" hidden="">
+	<label class="alpha" for="iOSbutton"></label>
+	
+	<hr>
+
+	<input class="second" type="checkbox" id="one" hidden="" >
+	<label class="beta" for="one">
+		<span></span>
+	</label>
+</body>
+</html>
+

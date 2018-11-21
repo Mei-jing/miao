@@ -6,13 +6,16 @@
 	<style>
 		label{
 			background-image: url(https://abs.twimg.com/a/1542244373/img/animations/web_heart_animation_edge.png?tdsourcetag=s_pctim_aiomsg);
-			display: block;
+			display: inline-block;
 			height: 100px;
 			width: 100px;
+			background-position: 0 0;
+			transition: background-position steps(28) 1s;
+			
 		}
-		label:active{
-			background-position: -1900px;
-			transition: steps(28 start) 1s;
+
+		input:checked + label{
+			background-position: -2800px;
 		}
 
 
@@ -20,7 +23,7 @@
 </head>
 <body>
 	<input id="heart" type="checkbox" hidden="" >
-	<label for="heart"></label>
+	<label for="heart" ></label>
 	
 </body>
 </html>

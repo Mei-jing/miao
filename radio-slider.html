@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        /*img{
+            display: none;
+            position: fixed;
+        }
+
+        input:checked + img{
+            display: block;
+        }
+*/
+        img{
+            position: absolute;
+            top: 50px;
+            left: 100%;
+            transition: left 1s;
+        }
+
+        input[type="radio"]:checked + img{
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="one">
+    <img src="https://i0.hdslb.com/bfs/archive/6002106a4e42642e2f7104ebf963635fd32c4a0d.jpg" alt="">
+    <input type="radio" name="one">
+    <img src="https://i0.hdslb.com/bfs/archive/e73e7c60a15526e85cada2155bda9f78858edbb7.jpg" alt="">
+    <input type="radio" name="one">
+    <img src="https://i0.hdslb.com/bfs/archive/9c8c50263ab3160ebf898a9749cd9a95493425e3.jpg" alt="">
+</body>
+</html>
