@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  	*{
+	background-color:rgba(0,0,0,0.08)
+}
+/*第一种*/
+div.one{
+	width:400px;
+	height:200px;
+	border:1px solid;
+	text-align:center;
+} 
+
+div.one span{
+	background-color:red;
+	line-height:200px;
+}
+
+/*第二种*/
+/*绝对定位必须知道子元素的宽高*/
+div.two{
+	width:400px;
+	height:200px;
+	border:1px solid;
+	position:relative;
+}
+
+div.two span{
+	width:100px;
+	height:100px;
+	background-color:red;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+}
+/*第三种*/
+/*用负margin向相反方向定位*/
+div.three{
+	width:400px;
+	height:200px;
+	border:1px solid;
+	position:relative;
+}
+
+div.three span{
+	width:100px;
+	height:100px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-50px;
+	margin-top:-50px;
+	background:red;
+}
+
+/*第四种*/
+/* vertical-align为什么不生效*/
+div.four {
+	width:400px;
+	height:200px;
+	text-align:center;
+  line-height: 200px;
+	display:block;
+} 
+
+div.four > span{
+	display:inline-block;
+	background-color:red;
+	vertical-align:middle;
+	height: 80px;
+	line-height: normal;
+}
+
+/* 第五种 */
+/* dispaly:table cell */
+div.five{
+	width:400px;
+	height:200px;
+	border:1px solid;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center
+}
+
+div.five span{
+	background-color:red;
+}
+
+/* 第六种 */
+/* 字元素定高定宽，margin：0 auto */
+/*有点问题*/
+div.six{
+	width:400px;
+	height:200px;
+	border:1px solid;
+	text-align:center;
+}
+
+div.six > span{
+	display:block;
+	width:100px;
+	height:100px;
+	margin:0 auto;
+	line-height:200px;
+	text-align:left;
+}
+
+  </style>
+</head>
+<body>
+<div class="one">
+	 <span>你好吗，我不好</span>
+</div>
+	<hr>
+<div class="two">
+	<span>你好吗，我不好</span>
+</div>
+	<hr>
+<div class="three">
+	<span>你好吗，我不好</span>
+</div>
+	<hr>
+<div class="four">
+	x
+	<span>你好吗，我不好</span>
+</div>
+	<hr>
+<div class="five">
+	<span>你好吗，我不好</span>
+</div>
+	<hr>
+<div class="six">
+	<span>你好吗，我不好</span>
+</div>
+</body>
+</html>
