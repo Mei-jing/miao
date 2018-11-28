@@ -47,25 +47,57 @@ div.first li:hover{
 	z-index:11111;
 }
 
+/*第二种*/
+
 div.second table{
 	border-collapse:collapse;
-	padding:0;
-	border:5px solid;
 }
 
-div.second td{
-	width:50px;
-	height:50px;
+tr,col{
 	border:5px solid blue;
 }
 
+div.second td{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	xborder:5px solid blue;
+}
+
 div.second td:hover{
-	border-color:red;
-	position:absolute;
-	margin-left:-5px;
-	margin-top:-5px;
+	border: 5px solid red;
+}
+
+/*第三种*/
+
+div.three ol{
+	list-style-type: none;
+	padding: 0;
+	border: 2.5px;
+	xoverflow: hidden; /*超出部分隐藏，盖不住父元素*/
+	display:flow-root;
+	width: 165px;
+
+}
+
+div.three li{
+	width: 50px;
+	height: 50px;
+	float: left;
+	border: 2.5px solid blue;
+	text-align: center;
 	line-height: 50px;
 }
+
+div.three li:hover{
+	border-color: red;
+	box-shadow: 0 0 0 2.5px red;
+	position: relative;
+	z-index: 888;
+}
+
+
+
 	</style>
 </head>
 <body>
@@ -86,6 +118,9 @@ div.second td:hover{
 
 <div class="second">
 	<table>
+		<col>
+		<col>
+		<col>
 		<tr>
 			<td>1</td>
 			<td>2</td>
@@ -102,6 +137,20 @@ div.second td:hover{
 			<td>9</td>
 		</tr>
 	</table>
+</div>
+
+<div class="three">
+	<ol>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+	</ol>
 </div>
 
 </body>
