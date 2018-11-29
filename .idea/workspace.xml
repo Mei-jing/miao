@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a2761a6-7169-45c2-bde9-91c6f958e66f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="53d04e95-db1f-41d0-954d-a5b586a09345" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mi/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,84 +15,65 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="1952491221">
+    <session id="1419317337">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="2" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="1" />
-          <entry key="html" value="1" />
+          <entry key="html" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="1870" />
-          <entry key="html" value="291" />
+          <entry key="html" value="360" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="1870" />
-          <entry key="HTML" value="291" />
+          <entry key="HTML" value="360" />
         </counts>
       </usages-collector>
     </session>
-    <session id="131050022">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.2" value="4" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="mi" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mobike.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="164" column="9" lean-forward="true" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/xiaomi.html" />
-        <option value="$PROJECT_DIR$/xiaomi.css" />
+        <option value="$PROJECT_DIR$/mobile.html" />
+        <option value="$PROJECT_DIR$/mobike.html" />
       </list>
     </option>
   </component>
@@ -102,28 +84,38 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="746" />
-    <option name="y" value="59" />
+    <option name="x" value="759" />
+    <option name="y" value="43" />
     <option name="width" value="1047" />
     <option name="height" value="977" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="miao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miao" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -142,53 +134,36 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4a2761a6-7169-45c2-bde9-91c6f958e66f" name="Default Changelist" comment="" />
-      <created>1543326268066</created>
+      <changelist id="53d04e95-db1f-41d0-954d-a5b586a09345" name="Default Changelist" comment="" />
+      <created>1543480582599</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1543326268066</updated>
-      <workItem from="1543326271222" duration="149000" />
-      <workItem from="1543326441611" duration="4282000" />
-      <workItem from="1543409345163" duration="9155000" />
-      <workItem from="1543418884547" duration="39000" />
-      <workItem from="1543418951181" duration="7000" />
-      <workItem from="1543479216343" duration="526000" />
-      <workItem from="1543479763637" duration="128000" />
-      <workItem from="1543479912995" duration="40000" />
-      <workItem from="1543479973274" duration="156000" />
-      <workItem from="1543480333096" duration="248000" />
+      <updated>1543480582599</updated>
+      <workItem from="1543480583911" duration="718000" />
+      <workItem from="1543490573031" duration="3196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14730000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="3914000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="746" y="59" width="1047" height="977" extended-state="0" />
+    <frame x="759" y="43" width="1047" height="977" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49946293" weight="0.5193261" />
-      <window_info id="Structure" order="1" sideWeight="0.50053704" side_tool="true" weight="0.27608007" />
-      <window_info id="Favorites" order="2" sideWeight="0.50053704" side_tool="true" weight="0.27608007" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24975222" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32979977" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32897863" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -201,10 +176,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xiaomi.html" />
-    <entry file="file://$PROJECT_DIR$/xiaomi.css" />
-    <entry file="file://$PROJECT_DIR$/mi.css">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/mobile.html" />
+    <entry file="file://$PROJECT_DIR$/mobike.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="164" column="9" lean-forward="true" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

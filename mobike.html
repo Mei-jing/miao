@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>JS Bin</title>
+	<style>
+		@media (min-width:1080px){
+			a{
+				width:25%;
+			}
+		}
+
+		@media (max-width:1080px)
+		{
+			a{width:50%;}
+		}
+
+		@media (max-width:640px){
+			a{width:100%;}
+		}
+
+		html,body{
+			margin:0;
+			padding:0;
+		}
+
+		.clearfix::after{
+			content:".";
+			clear:both;
+			display:block;
+		}
+
+		div.promo{
+			width:100%;
+			height:100%;
+			font-size:0;
+			box-sizing:border-box;
+			position:relative;
+		}
+
+
+		div.promo a{
+			min-height:260px;
+			float:left;
+			background-position:center center;
+			background-size:cover;
+			text-align:center;
+			text-decoration:none;
+			color:white;
+		}
+
+		div.promo a h3{
+			font-size:24px;
+			font-weight:400;
+		}
+
+		div.promo .a1{
+			background-image:url("https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg");
+		}
+
+		div.promo .a2{
+			background-image:url("https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg");
+		}
+
+		div.promo .a3{
+			background-image:url("https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg");
+		}
+
+		div.promo .a4{
+			background-image:url("https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg");
+		}
+
+		div.meta-links-wrap{
+			margin:0;
+			padding:0;
+			border-top:1px solid rgb(238, 238, 238);
+			border-bottom:1px solid rgb(238, 238, 238);
+			position:relative;
+		}
+
+		div.container div.icon1{
+			background-image:url(https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png);
+			width:50px;
+			height:50px;
+			xfloat:left;
+			background-position:center center;
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+		div.container div.icon2{
+			background-image:url(https://mobike.com/cn/assets/themes/moby/img/icon-rp.png);
+			width:50px;
+			height:50px;
+			xfloat:left;
+			background-position:center center;
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+		div.container div.icon3{
+			background-image:url(https://mobike.com/cn/assets/themes/moby/img/icon-credit.png);
+			width:50px;
+			height:50px;
+			xfloat:left;
+			background-position:center center;
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+
+
+		div.container div.meta-link1{
+			width:350px;
+			height:140px;
+			float:left;
+			xdisplay:inline-block;
+		}
+
+		div.container div.meta-link2{
+			width:320px;
+			height:140px;
+			float:left;
+		}
+
+		div.container div.meta-link3{
+			width:350px;
+			height:140px;
+			float:left
+		}
+
+		div.icon1,.icon2,.icon3{
+			position:relative;
+		}
+
+		div.container div.meta-link1 div.text{
+			position:absolute;
+			left:60px
+		}
+
+		div.container div.meta-link2 div.text{
+			position:absolute;
+			left:60px
+		}
+
+		div.container div.meta-link3 div.text{
+			position:absolute;
+			left:60px
+		}
+
+
+		div.container div.text h4{
+			margin:0;
+			width:160px;
+			height:22px;
+			text-align:left;
+		}
+
+		div.container div.text p{
+			width:160px;
+			height:22px;
+			text-align:left;
+			margin:0;
+		}
+	</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobike</title>
+	<style>
+
+	</style>
+</head>
+<body>
+<div class="promo">
+	<a class="a1 clearfix" href="https://mobike.com/cn/#modal-promo-video-1">
+		<div class="text">
+			<h3>大国品牌</h3>
+		</div>
+	</a>
+	<a class="a2 clearfix" href="https://mobike.com/cn/#modal-promo-video-2">
+		<div class="text">
+			<h3>摩拜科技</h3>
+		</div>
+	</a>
+	<a class="a3 clearfix" href="https://mobike.com/cn/#modal-promo-video-3">
+		<div class="text">
+			<h3>摩拜生活</h3>
+		</div>
+	</a>
+	<a class="a4 clearfix" href="http://campus.mobike.com/">
+		<div class="text">
+			<h3>摩拜校招</h3>
+		</div>
+	</a>
+</div>
+
+<div class="meta-links-wrap">
+	<div class="container">
+		<div class="meta-link">
+			<div class="meta-link1">
+				<div class="icon1">
+					<div class="text">
+						<h4>微信小程序</h4>
+						<p>微信扫一扫</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="meta-link2">
+				<div class="icon2">
+					<div class="text">
+						<h4>红包车</h4>
+						<p>骑摩拜能赚钱</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="meta-link3">
+				<div class="icon3">
+					<div class="text">
+						<h4>摩拜分</h4>
+						<p>文明出行信用骑车</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+</body>
+</html>
