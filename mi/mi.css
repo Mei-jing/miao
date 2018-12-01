@@ -8,6 +8,10 @@ html,body{
     box-sizing:border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 div.first{
     width:100%;
     background-color:rgb(51,51,51);
@@ -73,27 +77,55 @@ div.first a:hover{
 }
 
 div.second{
-    width:100%;
-    height:100px;
     position: relative;
 }
 
-div.second div.container{
+div.second > div.container{
     width:1226px;
-    height: inherit;
+    height:100px;
+    margin:auto;
+    font-size:16px;
+    display:flow-root;
 }
 
-div.second div.container div.header-logo{
+div.second > div.container div.header-logo{
+    display: inline-block;
     width:50px;
     height:50px;
-    position: absolute;
-    left:0;
-    right: 0;
+    background-image: url(https://s01.mifile.cn/i/logo.png);
+    background-position: center center;
+    background-size: contain;
+    float: left;
+    line-height: 100px;
+    vertical-align: middle;
+    margin-top:25px;
+}
+/*div.second > div.container div.header-logo::after{*/
+    /*content: "";*/
+    /*display:block;*/
+    /*clear:both;*/
+/*}*/
+
+div.second > div.container div.nav-item{
+    width: 800px;
+    height: 100px;
+    float: left;
 }
 
-div.second div.container div.nav-item{
-    width:850px;
-    height: inherit;
-    float: left;
+div.second > div.container div.nav-item ul{
+    height: 100px;
+}
+
+div.second > div.container div.nav-item ul li{
+    display: inline-block;
+    line-height: 100px;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+div.second > div.container div.input-right{
+    height: 50px;
+    float: right;
+    line-height: 100px;
 }
 
