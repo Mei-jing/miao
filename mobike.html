@@ -5,19 +5,30 @@
 	<meta name="viewport" content="width=device-width">
 	<title>JS Bin</title>
 	<style>
-		@media (min-width:1080px){
-			a{
-				width:25%;
-			}
+		body{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
 		}
 
-		@media (max-width:1080px)
-		{
-			a{width:50%;}
+		body *{
+			box-sizing: inherit;
 		}
 
-		@media (max-width:640px){
-			a{width:100%;}
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		h4,p{
+			margin: 0;
+			padding: 0;
+		}
+
+		a{
+			text-decoration: none;
+			color: white;
 		}
 
 		html,body{
@@ -30,13 +41,78 @@
 			clear:both;
 			display:block;
 		}
+		/*第一部分*/
+		div.hero{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			background-image: url("https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-7.jpg");
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
 
+		div.hero{
+			position: relative;
+		}
+
+		div.hero div.font{
+			position: absolute;
+			left: 20%;
+			top: 40%;
+		}
+
+		div.font h1{
+			font-size:420%;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+		}
+
+		div.font .button{
+			text-align: center;
+			font-weight: bold;
+			font-size: 22px;
+			box-shadow: rgba(74, 62, 62, 0.6) 0px 6px 30px 0px;
+			line-height: 50px;
+			width: 300px;
+			border-radius: 6px;
+		}
+		div.button a{
+			color: rgb(255, 255, 255);
+		}
+
+		div.hero > ul{
+			float: right;
+		}
+
+		div.hero >ul li{
+			display: inline-block;
+			font-size: 16px;
+			margin: 40px;
+			text-align: right;
+		}
+
+		div.hero ul ul  {
+			display:none;
+		}
+
+		div.hero ul ul:first-child:hover{
+			display:block;
+		}
+
+
+
+
+		/*第二部分*/
 		div.promo{
 			width:100%;
 			height:100%;
 			font-size:0;
 			box-sizing:border-box;
 			position:relative;
+			margin-left: -1px;
+			margin-right: -1px;
+			border-top: 1px solid white;
 		}
 
 
@@ -48,6 +124,8 @@
 			text-align:center;
 			text-decoration:none;
 			color:white;
+			border:1px solid white;
+			box-sizing: border-box;
 		}
 
 		div.promo a h3{
@@ -70,112 +148,150 @@
 		div.promo .a4{
 			background-image:url("https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg");
 		}
-
+		
+		/*第三部分*/
+		
 		div.meta-links-wrap{
-			margin:0;
-			padding:0;
-			border-top:1px solid rgb(238, 238, 238);
-			border-bottom:1px solid rgb(238, 238, 238);
-			position:relative;
-		}
-
-		div.container div.icon1{
-			background-image:url(https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png);
-			width:50px;
-			height:50px;
-			xfloat:left;
-			background-position:center center;
-			background-size:contain;
-			background-repeat:no-repeat;
-		}
-
-		div.container div.icon2{
-			background-image:url(https://mobike.com/cn/assets/themes/moby/img/icon-rp.png);
-			width:50px;
-			height:50px;
-			xfloat:left;
-			background-position:center center;
-			background-size:contain;
-			background-repeat:no-repeat;
-		}
-
-		div.container div.icon3{
-			background-image:url(https://mobike.com/cn/assets/themes/moby/img/icon-credit.png);
-			width:50px;
-			height:50px;
-			xfloat:left;
-			background-position:center center;
-			background-size:contain;
-			background-repeat:no-repeat;
+			text-align: center;
+			display: flow-root;
 		}
 
 
-
-		div.container div.meta-link1{
-			width:350px;
-			height:140px;
-			float:left;
-			xdisplay:inline-block;
+		div.meta-links-wrap .meta-link li{
+			float: left;
+			width: 33.333333333%;
+			height: 140px;
 		}
 
-		div.container div.meta-link2{
-			width:320px;
-			height:140px;
-			float:left;
+		div.meta-links-wrap .meta-link li:nth-child(2){
+			text-align: center;
 		}
 
-		div.container div.meta-link3{
-			width:350px;
-			height:140px;
-			float:left
+		div.meta-links-wrap .meta-link li:nth-child(3){
+			text-align: right;
 		}
 
-		div.icon1,.icon2,.icon3{
-			position:relative;
+		div.icon img{
+			width: 50px;
+			height: 50px;
 		}
+		
+		/*第四部分*/
 
-		div.container div.meta-link1 div.text{
-			position:absolute;
-			left:60px
-		}
-
-		div.container div.meta-link2 div.text{
-			position:absolute;
-			left:60px
-		}
-
-		div.container div.meta-link3 div.text{
-			position:absolute;
-			left:60px
-		}
-
-
-		div.container div.text h4{
-			margin:0;
+		div.footer > ul > li > span{
 			width:160px;
-			height:22px;
-			text-align:left;
+			height: 61px;
+			background-image: url(https://mobike.com/cn/assets/themes/moby/img/logo-text.svg);
+			background-repeat:no-repeat;
+			background-size: contain;
+			display: block;
 		}
 
-		div.container div.text p{
-			width:160px;
-			height:22px;
-			text-align:left;
-			margin:0;
+		div.footer > ul{
+			height: 245px;
+			float: left;
+			margin-right: 40px;
+		}
+
+		div.footer  div{
+			height: 245px;
+			float: left;
+			margin-right: 100px;
+		}
+
+		/*底部备案*/
+
+		div.bottom{
+			display: flow-root;
+		}
+
+		div.bottom ul{
+			height: 54px;
+			float: left;
+			font-size: 12px;
+			color: #aaa;
+		}
+
+		div.bottom img{
+			width: 40px;
+			height: 40px;
+			float: right;
+		}
+
+
+
+
+
+		@media (min-width:1080px){
+			div.hero{
+				height:810px;
+			}
+			div.promo a{
+				width:25%;
+			}
+			div.meta-links-wrap{
+				width:1080px;
+			}
+			div.meta-link-contain{
+				width: 346.67px;
+			}
+
+		}
+
+		@media (max-width:1080px)
+		{
+			div.hero{
+				height:645.5px;
+			}
+			div.promo a{
+				width:50%;
+			}
+		}
+
+		@media (max-width:640px){
+			div.promo a{
+				width:100%;
+			}
+			div.meta-links-wrap .meta-link li{
+				width: auto;
+			}
 		}
 	</style>
 </head>
 <body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Mobike</title>
-	<style>
 
-	</style>
-</head>
-<body>
+<div class="hero">
+	<ul>
+		<li><a href="">产品</a>
+			<ul class="list">
+				<li>
+					<div>经典版</div>
+					<div>轻便可靠</div>
+				</li>
+				<li>
+					<div>轻骑</div>
+					<div>城市随处可骑行</div>
+				</li>
+				<li><
+					<div>智能锁</div>
+					<div>摩拜智造天生靠得住</div>
+				</li>
+			</ul>
+		</li>
+		<li><a href="">摩拜科技</a></li>
+		<li><a href="">关于</a></li>
+		<li><a href="">广告合作</a></li>
+	</ul>
+
+	<div class="font">
+	<h1>让自行车回归城市</h1>
+		<div class="button">
+			<a href="">立即开始使用 Mobike</a>
+		</div>
+	</div>
+
+</div>
+
 <div class="promo">
 	<a class="a1 clearfix" href="https://mobike.com/cn/#modal-promo-video-1">
 		<div class="text">
@@ -199,38 +315,97 @@
 	</a>
 </div>
 
-<div class="meta-links-wrap">
-	<div class="container">
-		<div class="meta-link">
-			<div class="meta-link1">
-				<div class="icon1">
+	<div class="meta-links-wrap">
+		<ul class="meta-link">
+			<li>
+				<div class="meta-link-contain">
+					<div class="icon"><img src="https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png" alt=""></div>
 					<div class="text">
 						<h4>微信小程序</h4>
-						<p>微信扫一扫</p>
+						<p>微信扫一扫，直接用车</p>
 					</div>
 				</div>
-
-			</div>
-			<div class="meta-link2">
-				<div class="icon2">
+			</li>
+			<li>
+				<div class="meta-link-contain">
+					<div class="icon"><img src="https://mobike.com/cn/assets/themes/moby/img/icon-rp.png" alt=""></div>
 					<div class="text">
 						<h4>红包车</h4>
-						<p>骑摩拜能赚钱</p>
+						<p>骑摩拜，能赚钱</p>
 					</div>
 				</div>
-
-			</div>
-			<div class="meta-link3">
-				<div class="icon3">
+			</li>
+			<li>
+				<div class="meta-link-contain">
+					<div class="icon"><img src="https://mobike.com/cn/assets/themes/moby/img/icon-credit.png" alt=""></div>
 					<div class="text">
-						<h4>摩拜分</h4>
-						<p>文明出行信用骑车</p>
+						<h4>摩范分</h4>
+						<p>文明骑行，信用生活</p>
 					</div>
 				</div>
+			</li>
+		</ul>
+	</div>
 
+	<div class="container-md">
+		<div class="footer">
+				<ul>
+					<li><span></span></li>
+					<li>Beijing Mobike Technology Co., Ltd</li>
+					<li> 客服电话 <a href="tel:400-811-7799">400-811-7799</a></li>
+					<li> 北京摩拜科技有限公司</li>
+				</ul>
+			
+				<div class="footer-list">
+					<div class="product">
+						<h3>产品</h3>
+						<ul>
+							<li>经典版</li>
+							<li>轻骑</li>
+							<li>智能锁</li>
+						</ul>
+					</div>
+					<div class="life">
+						<H3>生活</H3>
+						<ul>
+							<li>城市</li>
+						</ul>
+					</div>
+					<div class="about">
+						<h3>关于</h3>
+						<ul>
+							<li>关于mobile</li>
+							<li>加入我们</li>
+							<li>联系我们</li>
+							<li>服务协议</li>
+						</ul>
+					</div>
+					<div class="social-net">
+						<h3>社交网络</h3>
+						<ul>
+							<li>微博</li>
+							<li>微信</li>
+							<li>知乎专栏</li>
+							<li>Facebook</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+
+		<div class="bottom">
+			<ul>
+				<li>京 ICP 备 15053449 号<span class="beian-icon" style="background-image: url('/cn/assets/themes/moby/img/beian-icon.png')"></span> 京公网安备 11010502032956 号
+					<br>
+					增值电信业务经营许可证编号：京 B2-20170053
+				</li>
+			</ul>
+			
+			<div>
+				<img src="https://mobike.com/cn/assets/themes/moby/img/footer-chengxin.jpg" alt="">
+			</div>
+		</div>
+
 </div>
 </body>
 </html>
