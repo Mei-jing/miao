@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>mobile</title>
+	<meta name="viewport" content="width=device-width">
+	<style>
+		@media (min-device-width:320px) and (max-device-width: 1024px) {
+
+			html,
+			body {
+				height: 100%;
+				font-size: 87.5%;
+			}
+
+			a::after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+
+			header {
+				height: 1%;
+				width: 90%;
+				margin: 0 auto;
+			}
+
+			a {
+				text-decoration: none;
+				color: rgb(0, 2, 86);
+				height: inherit;
+				display: inline-block;
+				margin-left: 2%;
+
+			}
+
+			a:hover {
+				color: rgb(139, 206, 156);
+			}
+
+			a:nth-child(2),
+			a:nth-child(3),
+			a:nth-child(4) {
+				float: right;
+			}
+
+
+			div.picture {
+				width: 90%;
+				height: 50%;
+				margin: 0 auto;
+				position: relative;
+			}
+
+			div.picture>div {
+				width: 40%;
+				margin: 0;
+				position: absolute;
+			}
+
+			img {
+				filter: grayscale(100);
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			div.picture div.pic1 {
+				left: 0;
+				top: 0;
+				xz-index: 3;
+			}
+
+			div.picture div.pic2 {
+				top: 30%;
+				left: 30%;
+				z-index: 2;
+			}
+
+			div.picture div.pic3 {
+				right: 0;
+				top: 70%;
+				xz-index: 1;
+			}
+
+			div.pic1:hover,
+			div.pic3:hover {
+				z-index: 3;
+			}
+
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<a href="">Daniel Eden, Designer</a>
+		<a href="">Blog</a>
+		<a href="">Portfolio</a>
+		<a href="">Libray</a>
+	</header>
+	<hr>
+	<div class="picture">
+		<div class="pic1">
+			<img src="https://daneden.imgix.net/2018/10/portrait.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=200&h=300&ixlib=react-7.2.0"
+			 alt="">
+		</div>
+		<div class="pic2">
+			<img src="https://daneden.imgix.net/2018/10/GenArt.png?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=200&h=400&ixlib=react-7.2.0"
+			 alt="">
+		</div>
+		<div class="pic3">
+			<img src="https://daneden.imgix.net/2018/10/home.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=200&h=300&ixlib=react-7.2.0"
+			 alt="">
+		</div>
+	</div>
+
+
+</body>
+
+</html>
