@@ -1,0 +1,458 @@
+大喵教育前端培训
+================
+
+## 阶段性测试 2018.12.07
+
+### 大喵教育版权所有 | 出题人：谢然
+
+
+01. 用文字描述如下选择器将选择哪些（个）元素
+    ```css
+    div, h1 {}
+    div[class] [id="abc"] {}
+    div:hover ul li > div {}
+    body :active {}
+    div:hover::after {}
+    ::selection {}
+    :target {}
+    input + ul + p ~ span {}
+    ```
+  答：div 里面的所有 h1  
+      div带有 class 且 id 为 adc  
+      当 div 被 hover 时 ul 里面的 li 的直接子元素 div  
+      当 body 被 active 时  
+      当 div 被hover 时 他的后伪元素  
+      所有带有 ::selection 伪元素的标签  
+      所有带有 ：target 伪类的标签  
+      input 后面的兄弟元素 ul 后面的 兄弟元素 p 后面的第二个 span 元素 
+
+02. 分别写出如下几个选择器的优先级
+    ```css
+    * * * {}
+    div * span {}
+    div[title] {}
+    fieldset legend + input {}
+    #some #thing .not:hover .abc:hover {}
+    ```
+  答：0 0 0 0；    
+      0 0 0 2；  
+      0 0 2 1；  
+      0 0 0 3；  
+      0 2 0 2.  
+
+03. https://www.example.com/a/b/ 页面中有如下代码
+    ```html
+    <link rel="stylesheet" href="//test.example.com/path/../the/../path/c.css">
+    ```
+    请问最终引入的c.css的完整路径是什么？  
+    答：//test.example.com/the/c.css
+04. `em,px,rem,vw,vh` 分别代表多长？  
+答：em ：相对长度单位，这个单位表示元素 font-size 的计算值。如果用在 font-size 属性本身，他会继承父元素的 font-size。  
+px： 与显示设备有关。对于屏幕显示，通常是一个设备像素（点）的显示。对于打印机和高分辨率的屏幕，一个 CSS 像素意味着多个设备像素，因此，每英寸的像素的数量保持在 96 左右。  
+rem：这个单位代表根元素的 font-size 大小。  
+vw：视口宽度的 1/100。
+vh：视口高度的 1/100。
+
+05. 显示器的物理分辨率为 `1920x1080`，操作系统设置的分辨率为 `1280x720`，网页的放大倍数为 `110%`，请计算一个 CSS 像素对应多少个显示器物理像素（面积与长度）？
+答：
+
+06. 写出如下代码显示在浏览器后**每个单词**的字号
+    ```html
+    <style>
+      html {
+        font-size: 20px;
+      }
+      section {
+        font-size: 10rem;
+      }
+      p {
+        font-size: 24px;
+      }
+      span {
+        font-size: 150%;
+      }
+      .sucks {
+        font-size: inherit;
+      }
+    </style>
+    <body>
+      <section>
+        <h2>Brown</h2>
+        <p>quick</p>
+        <p>jumps <span>over <span>lazy</span> dog</span></p>
+        <p class="sucks">sucks</p>
+      </section>
+    </body>
+    ```
+答：Brown 200px；  
+quick 24px;  
+jumps 24px;  
+over 36px;  
+lazy 54px;  
+dog 36px;  
+sucks 200px.  
+
+07. 字体的 italic 与 obsolete 的区别是？  
+答：italic 是字体族里面的斜体  
+obsolete 是模拟倾斜
+08. 写出满足如下条件的选择器
+    * 第  8个子结点之后，倒数第 5 个子结点之前的li结点
+    * 【类名】以“damiao-”开头的元素
+    * rel 属性中有 nofollow 这个单词的标签  
+答：  
+E[class^="damiao-"]  
+E[rel*="nofollow"]
+09. 链接伪类的几种状态书写的顺序是什么？为什么？  
+答：a:link  
+a:visited  
+a:focus  
+a:hover  
+a:active  
+在同时激活的情况下，后出现的伪类样式会覆盖前面的伪类样式。
+10. 如下 font 属性的值哪一个是书写正确的？
+    * font: serif 24px;
+    * font: serif bold 24px/1.2;
+    * font: bold 24px/1.2 serif;
+答：第三种。
+11. vertical-align 取 middle 时元素如何对齐？
+答：middle 会把行内元素框的中点与父元素基线上方 0.25em 处的一个点对齐。
+12. 什么是 baseline？  
+答：英文字母 x 等的底边线（下边缘线）
+13. 详述你对盒模型的理解。  
+答：CSS 盒模型中每个元素被表示为一个矩形的方框，框的内容（content-box）、内边距（padding）、边界（border）和外边距（margin）像洋葱的膜那样，一层包着一层构建起来。浏览器渲染网页布局时，它会算出每个框的内容的要用什么什么样式，周围的洋葱层有多大，以及框相对于其他框放在哪里
+14. 如何让一个元素可被 focus？如何去掉其被 focus 时的虚框？  
+答：加上 tabindex  
+去除虚线框 outline：none。
+15. 如何给css添加注释  
+答：/* 注释内容 */
+16. 指出如下css代码中的错误
+    ```
+    p,h1,{
+        
+        background-color: rgba:(abc)
+        font-varient; abc;
+        colr: #ff048;
+        font: "serif" 25px;
+    }
+    ```  
+答：h1后面的，  
+rgba后面的：  
+font-varient后面的；  
+font："serif"字体族 应放在后面。    
+
+17. 元素的高度写百分比在什么情况下【无效】，为什么？在什么情况下【有效】，有效时是以哪个元素的高度为基准值？  
+答：在父元素未设置高度时。  
+设置了父元素的高度时，以父元素的高度为基准值。  
+
+18. 解释 box-sizing 可以取哪些值，以及每个值的意义  
+答：content-box 和 border-box。  
+content-box 是默认值，任何边框和内边距的宽高都会被增加到最后绘制出来的元素宽度中；  
+border-box 是指边框和内边距的值包含在 内容区 的 width 里。
+
+19. 如下结构中，div 有两个伪元素，分别标出伪元素的位置，用 `<before></before>` 表示 `::before` 伪元素，用 `<after></after>` 表示 `::after` 伪元素
+    ```html
+    <before></before>
+    <div>
+      <h1>The article</h1>
+      <p>the quick brown fox</p>
+    </div>
+    <after></after>
+    ```
+
+20. 如何在伪元素中插入换行符？如何让这个换行符在页面中生效？  
+答：\a  
+CSS 中生效应用 white-space：pre 。
+21. 简述 ie7 市场份额比 ie6 低的原因并在网络上找出目前各大浏览器在中国和全球的市场份额  
+答：不稳定；   
+浏览器全球市场份额：
+![浏览器全球市场份额](https://wx2.sinaimg.cn/mw690/785070e7ly1fxy1hxqugvj20qb04amzp.jpg)  
+浏览器中国市场份额：
+![浏览器中国市场份额](https://ws1.sinaimg.cn/large/785070e7ly1fxy213tsocj20ve0450vk.jpg)
+22. 页面有无 `doctype` 声明会有什么区别？  
+答：有 doctype 会以声明的文档类型渲染；  
+无 doctype 声明就可能会出现一些怪异的行为，例如盒模型不准确、窗口的 size 不正确等问题。
+
+23. 有一张高为 100 宽为 50 的图片，内有一个直径为 40 的圆，其做为一个 200x200 的元素的背景图片，background-size 为 contain 和 cover 时，圆的直径分别为多少？  
+答：contain时，直径放大两倍，为80  
+cover时，直径放大4倍，为160  
+
+24. 写出实现小米网首页 logo 返回主页的动画效果的代码。  
+答：
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    div{
+	width:50px;
+	height:50px;
+	background-color:#ff6700;
+	position:relative;
+	overflow:hidden;
+}
+
+div::before{
+	width:50px;
+	height:50px;
+	content:"";
+	background-image:url(https://s01.mifile.cn/i/mi-logo.png);
+	background-color:#ff6700;
+	position:absolute;
+	opacity:1;
+	transition:0.2s;
+	transform:traslate(0,0);
+}
+
+div::after{
+	width:50px;
+	height:50px;
+	content:"";
+	background-image:url(https://s01.mifile.cn/i/mi-home.png);
+	background-color:#ff6700;
+	position:absolute;
+	opacity:1;
+	transition:0.2s;
+	transform:traslate(0,0);
+	margin-left:-50px;
+}
+
+div:hover::before{			    	        
+	transform:translate(50px,0);
+	opacity:0;
+}
+
+div:hover::after{
+	transform:translate(50px,0)
+}
+  </style>
+</head>
+<body>
+	<section>
+			<div></div>
+	</section>
+</body>
+</html>
+
+```
+
+25. 给出至少 5 种水平垂直居中方案。  
+答：1.绝对定位：  
+position:absolute;  
+left：0；  
+right：0；  
+top：0；  
+bottom：0；  
+margin：auto。
+
+2.line-height等于父元素高度,text-align:center;  
+
+3.display：table；  
+text-align：center；  
+vertical-align：middle；
+
+4.display:flex;  
+justify-content:center;  
+flex-direction:column;  
+align-items:center;
+
+5.position:
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+26. 简述 em 框，内容区，行内框，行框的构成以及其需要注意的问题。  
+答：em框在字体中定义。也称为字符框（character box）。实际的字形可能比其更高或者更矮。  
+内容区：非替换元素中元素中各字符的 em 框串在一起构成的框。替换元素中内容区就是元素的固有高度再加上可能的外边距，边框或内边距。   
+行内框：这个框通过向内容区增加行间距来描述。对于非替换元素，元素行内框的高度刚好等于 lin-height 的值。对于替换元素，元素行内框的高度恰好等于内容区的高度，因为行间距不应用到替换元素。  
+行框：这是包含该行中出现的行内框的最高点和最低点的最小框。换句话说，行框的上边要位于最高行内框的上边界，行框的底边要放在最低行内框的下边界。  
+
+27. 如何确定一个行内框的baseline及其最高点和最低点？  
+答：line-height
+
+28. `td` 元素的 `headers` 属性是干嘛的？  
+答：headers 属性规定表头与单元格相关联。  
+
+29. color 这个属性有什么需要注意的地方？  
+答：transparent；   
+currentColor
+30. 如何理解 inline-block 元素？它有什么需要注意的地方？  
+答：同时具备了 block 和 inline 两者的功能。  
+注意：1.inline-block元素受 vertical-align 属性的影响；  
+2.需要设置 inline-block 元素的宽度；
+3.使用 inline-block元素布局需要注意元素间可能出现间隙。font-size：0 消除
+
+
+31. 什么是 CSS Sprite？为什么要使用 CSS Sprite？它有哪些优缺点？  
+答：将一个页面涉及到的所有零星图片都包含到一张大图中去，再用 background-position，background-image，background-repeat的聚合进行背景定位。  
+优点：减少 http请求次数，图片字节
+缺点：需要精确定位，维护难度大
+
+32. 找出如下代码中的错误
+    ```
+    <style>
+      div::after：hover {
+        opacity: 85%；
+        transition: opactiy .3s step(5,end);
+      }
+      a:visited {
+        font-size: 28px;
+      }
+    </style>
+    <div>
+      <a href="jd.com”>京东商场<a>
+      <a href="mi.com”>小米网<a>
+    </div>
+    ```
+
+    答：::after不在最后；  
+    opacity设为百分比  
+
+
+33. 如下内容渲染在【同一行】中，请计算那一行的理论行高
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>JS Bin</title>
+      <style>
+        div {
+          margin: 80px;
+          background-color: violet;
+        }
+        span {
+          display: inline-block;
+          border: 1px dotted;
+          background-color: pink;
+        }
+
+        .a {
+          vertical-align: -15px;
+          width: 30px;
+          height: 30px;
+        }
+        .b {
+          margin-top: -50px;
+          width: 30px;
+          height: 30px;
+          vertical-align: top;
+        }
+        .c {
+          margin-bottom: 10px;
+          vertical-align: middle;
+        }
+        .d {
+          width: 30px;
+          height: 30px;
+        }
+      </style>
+    </head>
+    <body>
+      <div>
+        x<span class="a">foo</span>
+        <span class="b">bar</span>
+        <span class="c">baz</span>
+        <span class="d"></span>
+      </div>
+    </body>
+    </html>
+    ```
+    61px；
+
+34. `vertical-align` 取值为 `baseline` 时在不同情况下分别是如何对齐的？  
+答：vertical-align 只对 inline 和 inline-block 元素有效   
+1.如果父元素高度被某个子元素撑开  
+  如果这个元素是图片，改变图片的高度会改变基线的位置；  
+  如果这个子元素是文字，改变字体的 font-size 和 line-height 属性，都会改变基线的位置
+2.如果父级元素包含多个 inline-block 元素，且这些元素都设置了 vertical-align：baseline 属性，这一行上面所有元素都会是一个基线，改变一个元素的基线，其他所有元素的基线都会改变，基线的位置会跟基线最低的子元素或者父级元素的基线对齐。  
+
+35. 解释常规流与包含块的概念  
+答：常规流：文本从左向右、从上向下显示，也是传统 HTML 文档的文本布局。  
+包含块：一个元素的“布局上下文”。  
+36. 在各种情况下，一个元素的包含块分别是什么？
+答：1.根元素的包含块称为初始包含块，通常它的大小就是可视区域的大小。  
+2.position：static 或者 relative 的其他元素，他的包含块就是最近祖先的盒模型中的内容区域（不论其父元素是行内元素还是块级元素）。  
+3.position：fixed，该元素脱离 HTML 文档，其包含块为当前屏幕的可视窗口。  
+4.position：absolute的元素的包含块由最近的position：relative，absolute，fixed的祖先决定。如果该祖先元素是块级元素，那么包含块是其内边距所包围的区域（注意不是 content 区域）；如果是行内元素，那么元素的包含块是由该祖先第一个和最后一个 inline 框的内边距区域以及 direction 决定的.  
+
+37. 默写与背景相关的属性并说明每个属性的作用和会产生的效果  
+答：background-image:url() 添加图片；  
+background-color 背景颜色；  
+background-position 背景图片定位；  
+background-repeat 背景图片是否重复；  
+background-size 设置背景图片的尺寸来适应容器； 
+background-attachment 设置背景图像的在 viewport 的位置，是固定（scroll）还是随之包含块滚动（fixed）还是相对于元素内容固定（local）；  
+background-clip：设置元素的背景图像或颜色（background-image 或 background-color）是否延伸到边框下面；  
+background-origin  规定了指定背景图片（backgroun-image）属性的原点位置的背景相对区域。
+38. 如何实现单方向的盒子阴影？  
+答：x 轴或 y 轴 某一方向的偏移值为 0。 
+
+39. 默写与表格布局相关的 CSS 属性，并说明相关属性的作用  
+答：border-collapse 决定表格的边框是分开是合并，separate 相邻单元格都拥有独立的边框，collapse 相邻单元格共享边框；    
+border-spacing 指定相邻单元格边框之间的距离（只适用于 border-collapse：separate）；  
+caption-side  指定表格标题<caption>的位置；  
+empty-cells 定义了 user agent 应该怎么来渲染表格中么有可见内容的单元格的边框和背景。  
+table-layout 定义了用于布局表格单元格，行和列的算法；  
+vertical-align 指定表格单元格的（table-cell）元素的垂直对齐方式。  
+
+40. `visibility:hidden`，`display:none`，`opacity:0`分别有什么不同？  
+答：visibility：hidden，元素隐藏，但不会改变页面布局，也不会触发该元素已经绑定的事件；  
+display：none， 元素隐藏，改变页面布局，可以理解成在页面中把该元素删除掉一样；    
+visibility 属性可以动画 display 属性无法以任何形式动画；  
+opacity：0， 元素隐藏，不会改变页面布局，并且如果该元素已经绑定一些事件，如 click 事件，那么点击该区域，也能触发点击点击事件。  
+
+41. 当页面中出现表示时间的文字但表意不明确时，比较优雅且富有语义的做法是什么？  
+答：<time datetime="2018-12-5">前天</time>  
+
+42. CSS 中一般为何不使用 `cm`，`mm` 等长度单位？  
+答：不精确  
+
+43. 表格布局中各层的层次是？  
+答：单元格  
+行 
+行组  
+列  
+列组  
+表  
+44. 为什么要在文件的最后一行加一个回车？  
+
+45. 用 CSS 画出一个半圆形，分别给出实心与空心的的画法。实心和空心分别给出两种方案。  
+
+46. 表单元素有哪些伪类选择器？  
+答：checked  
+
+47. 如何禁用 textarea 元素默认的可缩放行为？  
+
+48. reset与 normalize 分别是什么，区别是什么，何种场景会使用到？      
+答：reset 去掉所有元素的默认样式；  
+normalize 让页面在所有浏览器显示效果相同，调整显示不一致的样式。  
+
+49. 表布局中边框合并的原则是什么？  
+答：border-style：hidden 优先级最高，  
+border-style：none优先级最低。 
+边框样式；
+布局层次；  
+
+50. 如何让背景图片从元素的左下角向上偏移5像素，往右偏移3像素；图片不重复平铺？写出代码。
+51. 写出创建如下目录结果的命令行脚本（注：有扩展名的为文件，没有扩展名的为文件夹）。
+    ```
+    a
+    │  readme.md
+    │
+    ├─foo
+    │  └─c
+    └─bar
+        │  a.txt
+        │  b.txt
+        │
+        └─y
+                a.js
+    ```
+
+52. 中英互翻
+
+    omit，multiple，驼峰式，中划线式，layout，typo，code review，半径，config，集合，矩形，binary，decimal，十六进制，八进制，SEO，HTML实体，语义化，兼容性，quirk，reference，大小写敏感，别名
