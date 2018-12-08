@@ -412,21 +412,54 @@ opacity：0， 元素隐藏，不会改变页面布局，并且如果该元素�
 答：不精确  
 
 43. 表格布局中各层的层次是？  
-答：单元格  
-行 
-行组  
-列  
-列组  
-表  
+答：单元格cell  
+行row   
+行组 row group    
+列  col  
+列组 col group   
+表  table  
+   
 44. 为什么要在文件的最后一行加一个回车？  
 
 45. 用 CSS 画出一个半圆形，分别给出实心与空心的的画法。实心和空心分别给出两种方案。  
+答：circle 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style>
+	div{
+	width:300px;
+	height:150px;
+	background-color:red;
+	border-radius:150px 150px 0 0;
+}	
+</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
+```
+
+
 
 46. 表单元素有哪些伪类选择器？  
-答：checked  
+答：:checked  
+:focus  
+:valid   
+:invalid   
+:required   
+:optional   
+:default     
 
 47. 如何禁用 textarea 元素默认的可缩放行为？  
-
+答：textarea{
+  style=resize:none;
+}
 48. reset与 normalize 分别是什么，区别是什么，何种场景会使用到？      
 答：reset 去掉所有元素的默认样式；  
 normalize 让页面在所有浏览器显示效果相同，调整显示不一致的样式。  
@@ -437,7 +470,32 @@ border-style：none优先级最低。
 边框样式；
 布局层次；  
 
-50. 如何让背景图片从元素的左下角向上偏移5像素，往右偏移3像素；图片不重复平铺？写出代码。
+50. 如何让背景图片从元素的左下角向上偏移5像素，往右偏移3像素；图片不重复平铺？写出代码。  
+答：
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style>
+	div{
+	height:300px;
+	height:300px;
+	border:1px solid;
+	background-image:url(https://image.uisdc.com/wp-content/uploads/2014/07/085625ht3.jpg);
+	background-size:150px 150px;
+	background-repeat:no-repeat;
+	background-position:calc(100% - 3px) calc(100% - 5px)
+}
+</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
+```
 51. 写出创建如下目录结果的命令行脚本（注：有扩展名的为文件，没有扩展名的为文件夹）。
     ```
     a
@@ -452,7 +510,10 @@ border-style：none优先级最低。
         └─y
                 a.js
     ```
+答：
+```
+mkdir -vp a{foo/{c},bar/{y}}
 
 52. 中英互翻
 
-    omit，multiple，驼峰式，中划线式，layout，typo，code review，半径，config，集合，矩形，binary，decimal，十六进制，八进制，SEO，HTML实体，语义化，兼容性，quirk，reference，大小写敏感，别名
+    omit忽略，multiple多，驼峰式camel，中划线式underlined，layout布局，typo错误，code review代码审查，半径radius，config配置，集合set，矩形rectangle，binary二进制，decimal十进制，十六进制hexadecimal，八进制octal，SEO搜索引擎优化，HTML实体 HTML entity，语义化    semanticization，兼容性compatibility，quirk俏皮话，reference参考，大小写敏感case sensitive，别名alias
