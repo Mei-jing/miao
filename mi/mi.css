@@ -1,5 +1,5 @@
 *,::before,::after {
-    background-color: rgba(0, 0, 0, 0.08);
+    xbackground-color: rgba(0, 0, 0, 0.08);
     box-sizing:inherit;
 }
 
@@ -183,6 +183,8 @@ div.second {
    
 }
 
+/*轮播图*/
+
 .hero-slider{
     width: 1226px;
     height: 460px;
@@ -204,13 +206,100 @@ div.second {
     width: 234px;
 }
 
-.hero-slider .menu ul li a{
+.hero-slider .menu > ul > li:hover{
+    background-color: #ff6700;
+    border: 1px dashed;
+}
+
+.hero-slider .menu > ul > li{
     font-size: 14px;
     padding-left: 30px;
     display: block;
     height: 42px;
     line-height: 42px;
 }
+
+div.third > div > div.menu > ul > li> ul{
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+div.third > div > div.menu > ul > li> ul >li{
+    height: 76px;
+    width: 248px;
+    background-color: #fff;
+    display: none;
+}
+
+div.third > div > div.menu >ul >li:hover >ul >li{
+    display: block;
+}
+
+div.third > div > div.menu > ul > li> ul >li:nth-child(n+7){
+    margin-left: 248px;
+}
+
+div.third > div > div.menu > ul > li> ul >li:nth-child(n+13){
+    margin-left:calc(2 * 248px);
+}
+
+div.third > div > div.menu > ul > li> ul >li:nth-child(n+19){
+    margin-left: calc(3*248px)
+}
+
+div.third > div > div.menu > ul > li> ul >li:nth-child(6n+7){
+    margin-top: -456px;
+}
+
+.slider{
+    position: relative;
+    height: 460px;
+}
+.slider input{
+    display: none;
+}
+
+.slider > div{
+    position: absolute;
+}
+
+.slider > div > label{
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+    background: #ff6700;
+    xline-height: 70px;
+}
+
+.slider > div > label:nth-child(2){
+    right: 0;
+}
+
+.slider section{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+.slider section label{
+    border:6px solid red;
+    width: 2px;
+    height: 2px;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.slider input:checked + * + * + * + div {
+    opacity: 1;
+    z-index: 6;
+  }
 
 
 
