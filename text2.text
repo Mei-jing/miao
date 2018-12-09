@@ -99,7 +99,7 @@ obsolete 是模拟倾斜
     * 第  8个子结点之后，倒数第 5 个子结点之前的li结点
     * 【类名】以“damiao-”开头的元素
     * rel 属性中有 nofollow 这个单词的标签  
-答：  
+答：:nth-child(n+8):nth-child(-n+5)  
 E[class^="damiao-"]  
 E[rel*="nofollow"]
 09. 链接伪类的几种状态书写的顺序是什么？为什么？  
@@ -361,7 +361,6 @@ currentColor
     </body>
     </html>
     ```
-    61px；
 
 34. `vertical-align` 取值为 `baseline` 时在不同情况下分别是如何对齐的？  
 答：vertical-align 只对 inline 和 inline-block 元素有效   
@@ -487,7 +486,7 @@ border-style：none优先级最低。
 	background-image:url(https://image.uisdc.com/wp-content/uploads/2014/07/085625ht3.jpg);
 	background-size:150px 150px;
 	background-repeat:no-repeat;
-	background-position:calc(100% - 3px) calc(100% - 5px)
+	background-position:left 3px bottom 5px
 }
 </style>
 </head>
@@ -512,7 +511,7 @@ border-style：none优先级最低。
     ```
 答：
 ```
-mkdir -vp a{foo/{c},bar/{y}}
+mkdir -p a{foo/{c},bar/{y}}
 
 52. 中英互翻
 

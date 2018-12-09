@@ -26,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/balloon.css">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+              <caret column="15" selection-start-column="15" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -145,11 +145,12 @@
       <workItem from="1543924288673" duration="599000" />
       <workItem from="1543928510183" duration="4617000" />
       <workItem from="1544094048799" duration="22000" />
+      <workItem from="1544344431076" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51967000" />
+    <option name="totallyTimeSpent" value="51970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="802" y="11" width="998" height="977" extended-state="0" />
@@ -217,7 +218,7 @@
     <entry file="file://$PROJECT_DIR$/balloon.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
         </state>
       </provider>
     </entry>
