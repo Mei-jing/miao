@@ -1,5 +1,5 @@
 *,::before,::after {
-    xbackground-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(0, 0, 0, 0.08);
     box-sizing:inherit;
 }
 
@@ -204,6 +204,7 @@ div.second {
     padding: 20px 0;
     height: 420px;
     width: 234px;
+    z-index: 10;
 }
 
 .hero-slider .menu > ul > li:hover{
@@ -260,11 +261,13 @@ div.third > div > div.menu > ul > li> ul >li:nth-child(6n+7){
     display: none;
 }
 
-.slider > div{
+.slider div{
     position: absolute;
+    width: 1226px;
+    transition: 0.2s;
 }
 
-.slider > div > label{
+.slider > div > label:first-child{
     width: 40px;
     height: 70px;
     position: absolute;
@@ -277,14 +280,24 @@ div.third > div > div.menu > ul > li> ul >li:nth-child(6n+7){
     xline-height: 70px;
 }
 
-.slider > div > label:nth-child(2){
+.slider > div >label:nth-child(2){
+    width: 40px;
+    height: 70px;
+    position: absolute;
     right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+    background: #ff6700;
+    xline-height: 70px;
 }
 
 .slider section{
     position: absolute;
     bottom: 20px;
     right: 30px;
+    z-index: 8;
 }
 
 .slider section label{
@@ -296,11 +309,169 @@ div.third > div > div.menu > ul > li> ul >li:nth-child(6n+7){
     display: inline-block;
 }
 
-.slider input:checked + * + * + * + div {
+.slider input:checked + * + * + * + * + div {
     opacity: 1;
     z-index: 6;
   }
 
+  /* 第四部分，轮播图下方列表 */
+.fourth .home-hero-sub{
+    width: 1226px;
+    height: 170px;
+    margin:auto;
+    margin-top: 14px;
+}
+
+.fourth .home-hero-sub .home-channel-sub{
+    float: left;
+    width: 234px;
+}
+
+.fourth .home-hero-sub .home-channel-sub .home-channel-list{
+    float: left;
+    text-align: center;
+}
+
+.fourth .home-hero-sub .home-channel-sub .home-channel-list li{
+    width: 70px;
+    height: 82px;
+    float: left;
+    position: relative;
+    /* white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px;
+    text-overflow: ellipsis; */
+}
+
+.fourth .home-hero-sub .home-channel-sub .home-channel-list li img{
+    padding-top: 18px;
+}
+
+.fourth .home-hero-sub .home-channel-sub .home-channel-list li::before{
+    width: 64px;
+    height: 1px;
+    position: absolute;
+    content: "";
+    background: #665e57;
+    left:6px;
+}
+
+.fourth .home-hero-sub .home-channel-sub .home-channel-list li::after{
+    width: 1px;
+    height: 70px;
+    top:6px;
+    left:0;
+    position: absolute;
+    content: "";
+    background: #665e57;
+}
+
+
+.fourth .home-hero-sub .home-promo{
+    width: 978px;
+    float: right;
+}
+
+.home-promo .home-promo-list li{
+    width: 316px;
+    height: 170px;
+    float: right;
+    margin-left: 10px;
+}
+
+.home-promo .home-promo-list li img{
+    width: 316px;
+    height: 170px;
+}
+
+/*第五部分 小米闪购*/
+
+.fifth .flashpurchase{
+    width: 1226px;
+    height: 438px;
+    margin: auto;
+}
+
+.fifth .flashpurchase .box-hd{
+    height: 58px;
+    position: relative;
+}
+
+.fifth .flashpurchase .box-hd .tittle{
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color: #333;
+}
+
+.fifth .flashpurchase .box-hd .more{
+    position: absolute;
+    right: 0;
+    top: 24px;
+}
+
+.fifth .flashpurchase .box-bd{
+    width: 1226px;
+}
+
+.fifth .flashpurchase .box-bd .flashpurchase-countdown{
+    width: 234px;
+    height: 300px;
+    text-align: center;
+}
+
+.box-bd .flashpurchase-countdown .countdown-card{
+}
+
+.flashpurchase-countdown div.countdown-card > div.time-tittle{
+    font-size: 21px;
+    color: #ef3a3b;
+    padding-top: 39px;
+}
+
+.flashpurchase-countdown div.countdown-card > img{
+    margin:25px auto;
+}
+
+.flashpurchase-countdown div.countdown-card >div.sub{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.54)
+}
+
+.flashpurchase .flash-time{
+    width: 168px;
+    margin: 28px auto 0;
+}
+
+.flashpurchase-countdown .flash-time .box{
+    width: 46px;
+    height: 46px;
+    background-color: #605751;
+    color: #fff;
+    font-size: 24px;
+    line-height: 46px;
+    float: left;
+}
+
+.flashpurchase-countdown .flash-time .dosh{
+    width: 15px;
+    height: 46px;
+    line-height: 46px;
+    color: #605751;
+    font-size: 28px;
+    float: left;
+}
+
+.home-banner-box{
+    width: 1226px;
+    height: 120px;
+    margin: auto;
+}
+
+.home-banner-box img{
+    width: 1226px;
+    height: 120px;
+}
 
 
 
