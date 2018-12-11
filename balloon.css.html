@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+section{
+	height: 100%;
+	width: 100%;
+	margin-top: 30px;
+}
+
+button{
+	border: none;
+	border-radius: 5px;
+	font-size:1.6rem;
+	text-align: center;
+	color: #fff;
+	background-color: #ff3d2e;
+	margin-top: 1.5rem;
+	margin-left: 10%;
+	margin-bottom: 3rem;
+	position: relative;
+	display: inline-block;
+	padding: 1.2rem 2.8rem;
+}
+
+ button::after{
+	content:attr(data-balloon);
+	position: absolute;
+	transition:0.2s;
+	font-size:12px;
+	background-color:rgba(17,17,17,0.9);
+	border-radius:4px;
+	color:#fff;
+	white-space:nowrap;
+	opacity:0;
+	padding: 0.5em 1em;
+}
+
+button:hover{
+	background-color:rgb(224, 25, 9)
+}
+
+ button:hover::after{
+	opacity: 1;
+}
+
+button.top::after{
+	bottom:100%;
+	left:50%;
+	margin-bottom:15px;
+	transform:translate(-50%,10px);
+	transform-origin:top;
+}
+
+button.top:hover::after{
+	transform:translate(-50%,-10px);
+}
+
+button.left::after{
+	right:100%;
+	top:15px;
+	margin-left:15px;
+	transform-origin:left;
+}
+
+button.left:hover::after{
+    transform:translate(-60%,0);
+}
+
+button.right::after{
+	left:100%;
+	top: 15px;
+}
+
+ button.right:hover::after{
+	transform: translate(40%,0);
+}
+
+button.bottom::after{
+	top: 100%;
+	left: 50%;
+	transform:translate(-50%,0);
+}
+
+button.bottom:hover::after{
+	transform: translate(-50%,150%);
+}
+
+button.small::after{
+	white-space:normal !important;
+	width: 80px !important;
+}
+
+button.medium::after{
+	width: 150px !important;
+	white-space: normal !important;
+}
+
+button.large::after{
+	width: 260px !important;
+	white-space: normal !important;
+}
+
+button.Xlarge::after{
+	width: 380px !important;
+	white-space: normal !important;
+}
+
+button.fit::after{
+	width:100% !important;
+	white-space: normal !important;
+}
+
+button.visible::after{
+	opacity: 1 !important ;
+	transform:translate(-50%,-10px);
+}
+
+  </style>
+</head>
+<body>
+	<section>
+		<div class="positioning">
+			<button data-balloon="Whats up!" class="top">hover me!</button>
+			<button data-balloon="Whats up!" class="left">hover me!</button>
+			<button data-balloon="Whats up!" class="right">hover me!</button>
+			<button data-balloon="Whats up!" class="bottom">hover me!</button>
+		</div>
+
+		<div class="length">
+			<button data-balloon="HI" class="small top">I'm a small tooltip</button>
+			<button data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." class="medium top">I'm a medium tooltip.</button>
+			<button data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" class="large top">I'm a large tooltip</button>
+			<button data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" class="Xlarge top">I'm a Xlarge tooltip</button>
+			<button data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" class="fit top">My width will fit to element</button>
+		</div>
+		
+		<div class="visible">
+			<button data-balloon="I am always visible" class="visible top">Always visible!</button>
+		</div>
+
+		<div class="glyphs">
+			<button data-balloon="HTML special characters: &#9787; &#9986; &#9820;" class="top">hover me!</button>
+			<button data-balloon="Emojis: 😀 😬 😁 😂 😃 😄 😅 😆" class="top">hover me!</button>
+			<button data-balloon="Font Awesome: &#xf030; &#xf133; &#xf1fc; &#xf03e; &#xf1f8;" class="top">hover me!</button>
+		</div>
+	</section>
+</body>
+</html>
+
+

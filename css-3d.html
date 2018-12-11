@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  	*{
+	background-color:rgba(0,0,0,0.08)
+}
+
+@keyframes smalltransform3d{
+	from{
+		transform:rotatex(0deg) rotatez(0deg)
+	}
+	to{
+		transform:rotatex(360deg) rotatez(360deg)
+	}
+}
+
+div{
+	border:1px solid;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	transition:2s;
+}
+
+
+section{
+	height:300px;
+	position:relative;
+	transform:perspective(800px) rotatex(40deg) rotatez(20deg);
+	transform-style:preserve-3d;
+	animation:smalltransform3d  3s linear infinite;
+}
+
+div.small{
+	width:50px;
+	height:50px;
+
+}
+
+section > div.small:nth-child(1){
+	transform:rotatey(90deg)
+		translatez(25px);
+	background-color:violet;
+}
+
+section > div.small:nth-child(2){
+	transform:rotatey(-90deg)
+	translatez(25px);
+	background-color:tan;
+}
+
+section > div.small:nth-child(3){
+	transform:rotatex(90deg)
+		translatez(25px);
+	background-color:yellow;
+
+}
+
+section > div.small:nth-child(4){
+	transform:rotatex(-90deg)
+		translatez(25px);
+	background-color:green;
+
+}
+
+section > div.small:nth-child(5){
+	transform:rotatex(0deg)
+		translatez(25px);
+	background-color:black;
+}
+
+section > div.small:nth-child(6){
+	transform:rotatex(180deg)
+		translatez(25px);
+		background-color:white;
+
+}
+
+
+@keyframes largetransform3d{
+	from{
+		transform:rotatex(0deg) rotatez(0deg)
+	}
+	to{
+		transform:rotatex(720deg) rotatez(720deg)
+	}
+}
+
+
+
+main{
+	height:300px;
+	position:relative;
+	transform:perspective(800px) rotatex(40deg) rotatez(20deg);
+	transform-style:preserve-3d;
+	animation:largetransform3d  8s linear infinite;
+}
+
+main > div.large{
+	width:150px;
+	height:150px;
+}
+
+main > div.large:nth-child(1){
+	transform:rotatex(90deg)
+		translatez(75px)
+}
+
+main > div.large:nth-child(2){
+	transform:rotatex(90deg)
+		translatez(-75px)
+}
+
+main > div.large:nth-child(3){
+	transform:rotatey(90deg)
+	translatez(75px)
+}
+
+main > div.large:nth-child(4){
+	transform:rotatey(90deg)
+		translatez(-75px)
+}
+
+main > div.large:nth-child(5){
+	transform:translatez(75px)
+}
+
+main > div.large:nth-child(6){
+	transform:translatez(-75px)
+}
+  </style>
+</head>
+<body>
+	<section>
+		<div class="small">1</div>
+		<div class="small">2</div>
+		<div class="small">3</div>
+		<div class="small">4</div>
+		<div class="small">5</div>
+		<div class="small">6</div>
+		<main>
+			<div class="large"></div>
+			<div class="large"></div>
+			<div class="large"></div>
+			<div class="large"></div>
+			<div class="large"></div>
+			<div class="large"></div>
+		</main>
+	</section>
+</body>
+</html>
