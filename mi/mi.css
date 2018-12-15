@@ -28,7 +28,8 @@ a{
     font-size: 14px;
     font-weight: 400;
     text-align: center;
-    text-emphasis: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
 }
 
@@ -195,6 +196,16 @@ h2{
     display: block;
 }
 
+.rank{
+    margin:0 10px;
+    font-size: 12px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color:#b0b0b0;
+}
+
 li:hover > .review-wrapper{
     margin-top: -59px;
     opacity: 1;
@@ -208,8 +219,72 @@ li:hover > .review-wrapper{
 }
 
 .first-col{
-    
+    float:left;
+    width: 234px;
 }
+
+.first-col ul{
+    width: 234px;
+}
+
+.first-col > ul > li{
+    width: 234px;
+    float: left;
+    xmargin-right: 14px;
+}
+
+.first-col >ul > li >img{
+    width: 234px;
+    height: 300px;
+}
+
+.big-container .box-bd > ul{
+    width:978px;
+    height: 628px;
+    float: left;
+    margin-left: 14px;
+}
+
+.big-container .box-bd > ul  li{
+    height: 300px;
+    width:234px;
+    float: left;
+    background-color: #fff;
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 14px;
+}
+
+.big-container .box-bd > ul  li:nth-child(n+8){
+    height: 143px;
+    width: 234px;
+    position: relative;
+}
+
+.big-container .box-bd > ul  li:nth-child(n+8) img{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    right: 20px;
+    top: 32px;
+}
+
+div.box-bd > ul > li:nth-child(8) > h3{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+ div.box-bd > ul > li:nth-child(8) > p.price{
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+
+div.box-bd > ul > li:nth-child(8) > h3{
+    width: 94px;
+}
+
 
 
 
