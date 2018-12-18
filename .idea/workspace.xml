@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/noi.js" line="9" />
+    <bookmark url="file://$PROJECT_DIR$/noi.js" line="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="53d04e95-db1f-41d0-954d-a5b586a09345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/noi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/noi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noi.html" beforeDir="false" afterPath="$PROJECT_DIR$/noi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noi.js" beforeDir="false" afterPath="$PROJECT_DIR$/noi.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/noi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4080">
-              <caret line="260" column="9" lean-forward="true" selection-start-line="260" selection-start-column="9" selection-end-line="260" selection-end-column="9" />
+            <state relative-caret-position="633">
+              <caret line="395" column="35" selection-start-line="395" selection-start-column="35" selection-end-line="395" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -30,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/noi.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="2" />
+              <caret selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -163,12 +166,12 @@
       <workItem from="1544094048799" duration="22000" />
       <workItem from="1544344431076" duration="3000" />
       <workItem from="1545059017890" duration="5000" />
-      <workItem from="1545104649046" duration="18094000" />
+      <workItem from="1545104649046" duration="25902000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70069000" />
+    <option name="totallyTimeSpent" value="77877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1239" y="107" width="998" height="977" extended-state="0" />
@@ -257,14 +260,14 @@
     <entry file="file://$PROJECT_DIR$/noi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="2" />
+          <caret selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/noi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="260" column="9" lean-forward="true" selection-start-line="260" selection-start-column="9" selection-end-line="260" selection-end-column="9" />
+        <state relative-caret-position="633">
+          <caret line="395" column="35" selection-start-line="395" selection-start-column="35" selection-end-line="395" selection-end-column="35" />
         </state>
       </provider>
     </entry>
