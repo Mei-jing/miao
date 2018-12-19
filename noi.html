@@ -397,7 +397,153 @@ p + p + p + p + p+"\n" +
     var x = +prompt("请输入重量")
     var a = prompt("是否加急 y or n")
 
-    if (x<1000 && a==n){
+    var b = Math.ceil((x-1000)/500)*4
+    var c = b +8
+    var d = b +5 +8
+
+    if (x<1000 && a==="n"){
         console.log("8")
+    }else if (x>1000 && a==="n"){
+        console.log(c)
+    } else if (x>1000 && a==="y"){
+        console .log(d)
+    }
+</script>
+
+<script  id="ch0104/15" type="1.4.15">
+    var a = +prompt()
+    var b = +prompt()
+    var c = +prompt()
+
+    var d = Math.max(a,b,c)
+
+    console.log(d)
+</script>
+
+<script  id="ch0104/16" type="1.4.16">
+    var a = +prompt()
+    var b = +prompt()
+    var c = +prompt()
+
+    if (a+b>c && a+c>b && b+c>a){
+        console.log("yes")
+    }else{console.log("no")}
+</script>
+
+<script id="ch0104/17" type="1.4.17">
+    var a = +prompt()
+
+    if(a % 400==0 || (a%4==0 && a%100!=0)){
+        console.log("Y")
+    }else{
+        console.log("N")
+    }
+</script>
+
+<script id="ch0104/18" type="1.4.18">
+    var x = +prompt()
+    var y = +prompt()
+
+    if((x>=-1 && x<=1) && (y>=-1 && y<=1)){
+        console.log("yes")
+    }else{
+        console.log("no")
+    }
+</script>
+
+<script id="ch0104/19" type="1.4.19">
+    var x = +prompt()
+    var y = +prompt()
+    var z = prompt()
+
+    var a= x+y
+    var b= x-y
+    var c= x*y
+    var d= x/y
+
+    if(z=== "+"){
+        console.log(a)
+    }else if(z === "-"){
+        console.log(b)
+    }else if(z === "*"){
+        console.log(c)
+    }else if(z === "/"){
+        if(y != 0){
+            console.log(d)
+        }else if(y === 0){
+            console.log("Divided by zero")
+        }
+    } else{
+        console.log("Invalid operator")
+    }
+</script>
+
+<script id="ch0104/20" type="1.4.20">
+    var a = +prompt()
+    var b = +prompt()
+    var c = +prompt()
+
+    if(b*b==4*a*c){
+        console.log('x1=x2=' + (-b/2*a))
+    }else if(b*b>4*a*c){
+        var x1=(-b + Math.sqrt(b*b - 4*a*c))/2*a
+        var x2=(-b - Math.sqrt(b*b - 4*a*c))/2*a
+        console.log("x1="+x1,"x2="+x2)
+    }else if(b * b < 4 * a * c){
+        var x1imag = (Math.sqrt(4 * a * c - b * b))/(2 * a) //此为 delta ,因为 delta < 0,所以4ac-b^2
+        var x1real = -b/(2 * a)
+
+        if (x1imag % 1 === 0){  //可判断是否为整数
+            x1imag=x1imag
+        }else{
+            x1imag = x1imag.toFixed(5)
+        }
+
+        if(x1imag ===1){
+            x1imag = "i"          // 引入 i
+
+        }else if (x1imag === -1){
+            x1imag = "-i"
+        }else {
+            x1imag = x1imag + "i"
+        }
+
+        var x1 = (x1real) + "+" + (x1imag)
+
+        var x2imag = (Math.sqrt(4 * a * c - b * b))/(2 * a) //此为 delta
+        var x2real = -b/(2 * a)
+
+        if (x2imag % 1 ===0){
+            x2imag=x2imag
+        }else{
+            x2imag = x2imag.toFixed(5)
+        }
+
+        if(x2imag ===1){
+            x2imag = "i"
+        }else if (x2imag === -1){
+            x2imag = "-i"
+        }else {
+            x2imag = x2imag + "i"
+        }
+
+        x1real =x1real.toFixed(5)
+        x2real =x2real.toFixed(5)
+
+        var x1 = (x1real) + "+" + (x1imag)
+        var x2 = (x2real) + "-" + (x2imag)
+        console.log("x1 =" + x1,"x2 =" + x2)
+    }
+</script>
+
+<script id="ch0104/21" type="1.4.21">
+    var n = +prompt()
+    var x = +prompt()
+    var y = +prompt()
+
+    var z = n - Math.ceil(y/x)
+
+    if(n>=(y/x)){
+        console.log(z)
     }
 </script>
