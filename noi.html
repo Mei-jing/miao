@@ -838,3 +838,61 @@ p + p + p + p + p+"\n" +
 
   console.log(time)
 </script>
+
+<script id="ch0105/20" type="1.5.20">
+  var h = +prompt()
+	var sum = 0
+	
+	for (var i = 0; i < 10; i++) {
+		h = h / 2
+		sum = sum + h * 2
+	}
+	
+	var sum_all = (sum + 20 - h * 2).toFixed(4)  // 第一次落地 最后一次回弹
+	
+	console.log(sum_all, h.toFixed(7)) 
+</script>
+
+<script id="ch0105/21" type="1.5.21">
+  var n = +prompt()
+
+  for (var i = 0;; i++) {
+    if (n % 2 == 1) {
+      n = n * 3 + 1
+      console.log((n - 1) / 3 + "*3+1=" + n)
+    } else if (n % 2 == 0) {
+      n = n / 2
+      console.log(2 * n + "/2=" + n)
+      if (n === 2) {
+        console.log("2/2=1")
+        break
+      }
+    }
+  }
+
+  console.log("End")
+</script>
+
+<script id="ch0105/22" type="1.5.22">
+  var rest = 0
+  var mom = 0
+  debugger
+
+  for (var i = 1; i <= 12; i++) {
+    var budget = +prompt()
+    rest = 300 + rest - budget
+    if (rest >= 100) {
+      do {
+        rest -= 100
+        mom += 100  //每扣100块，妈妈多 100 块
+      } while (rest >= 100)
+    } else if (rest < 0) {
+      console.log("-" + i)
+      break
+    }
+  }
+
+  var sum = mom * (1 + 0.2) + rest
+
+  console.log(sum)
+</script>
