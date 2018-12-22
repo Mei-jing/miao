@@ -876,23 +876,191 @@ p + p + p + p + p+"\n" +
 <script id="ch0105/22" type="1.5.22">
   var rest = 0
   var mom = 0
-  debugger
-
+  
   for (var i = 1; i <= 12; i++) {
     var budget = +prompt()
     rest = 300 + rest - budget
-    if (rest >= 100) {
-      do {
+    if (rest > 0) {
+      while (rest >= 100) {
         rest -= 100
-        mom += 100  //每扣100块，妈妈多 100 块
-      } while (rest >= 100)
+        mom += 100
+      }
     } else if (rest < 0) {
       console.log("-" + i)
       break
     }
+    if (i == 12) {
+      var sum = mom * (1 + 0.2) + rest
+      console.log(sum)
+    }
+  }
+</script>
+
+<script id="ch0105/23" type="1.5.23">
+  var m = +prompt()
+  var n = +prompt()
+  var x
+  var y = 0
+  var a = 0
+  debugger
+
+  for (var i = 0; i < n; i++) {
+    x = +prompt()
+    y = y + x
+    if (y > m) {
+      y = y - x
+      a += 1
+    }
   }
 
-  var sum = mom * (1 + 0.2) + rest
+  console.log(a)
+</script>
 
-  console.log(sum)
+<script id="ch0105/24" type="1.5.24">
+  var n = +prompt()
+  var big
+  var small
+  var normal = 0
+
+  for (var i = 0; i < n; i++) {
+    big = +prompt()
+    small = +prompt()
+    if (big >= 90 && big <= 140 && small >= 60 && small <= 90) {
+      normal += 1
+    } else {
+      normal = 0
+    }
+  }
+
+  console.log(normal)
+</script>
+
+<script id="ch0105/25" type="1.5.25">
+  var a
+  var b
+  var c
+
+  for (c = 1; c < 7; c++) {  //首位不能等于0    进位依次循环
+    for (a = 1; a < 7; a++) {  //首位不能等于0
+      for (b = 0; b < 7; b++) {
+        if ((c * 1 + b * 7 + a * 7 * 7) === (a * 1 + b * 9 + c * 9 * 9)) {    
+          var seven = +(a + "" + b + "" + c)
+          var nine = +(c + "" + b + "" + a)
+          var ten = c * 1 + b * 7 + a * 7 * 7
+          console.log(ten, seven, nine)
+        }
+      }
+    }
+  }
+</script>
+
+<script id="ch0105/26" type="1.5.26">
+  var a
+  var b
+  var c
+  var d
+  var n = +prompt()
+  var x = 0
+
+  for (var i = 0; i < n; i++) {
+    var number = +prompt()
+    a = parseInt((number / 1000) % 10)
+    b = parseInt((number / 100) % 10)
+    c = parseInt((number / 10) % 10)
+    d = (number) % 10
+    if (d - a - b - c > 0) {
+      x += 1
+    }
+  }
+
+  console.log(x)
+</script>
+
+<script id="ch0105/27" type="1.5.27">
+  var k = +prompt()
+  var S = 1
+
+  for (var i = 2;; i++) {
+    S = S + 1 / i
+    if (S > k) {
+      console.log(i)
+      break
+    }
+  }
+</script>
+
+<script id="ch0105/28" type="1.5.28">
+  var n = +prompt()
+  var m
+
+  for (var i = 0;; i++) {
+    if (n > 0) {
+      m = n % 10
+      n = parseInt(n / 10)
+      console.log(m)
+    } else {
+      break
+    }
+  }
+</script>
+
+<script id="ch0105/29" type="1.5.29">
+  var n = +prompt()
+  var m = 0
+
+  for (var i = 0;; i++) {
+    while (n != 0) {
+      m = m * 10 + n % 10
+      n = parseInt(n / 10)
+    }
+    break
+  }
+
+  console.log(m)
+</script>
+
+<script id="ch0105/30" type="1.5.30">
+  var m = +prompt()
+  var k = 0
+  var n
+  debugger
+
+  if (m % 19 === 0) {
+    for (var i = 0;; i++) {
+      if (m % 10 == 3) {
+        k += 1
+      }
+      m = parseInt(m / 10)
+      if (k === 3) {
+        console.log("Yes")
+        break
+      }
+    }
+  } else {
+    console.log("No")
+  }
+</script>
+
+<script id="ch0105/32" type="1.5.32">
+  var p = 1
+  var q = 1
+  var n = +prompt()
+  var sum = 0
+
+  for (var i = 0; i < n; i++) {
+    p = p + q // 2 = 1 + 1, 3 = 2 + 1, 5 = 3 + 2     
+    q = p - q // 1 = 2 - 1, 2 = 3 - 1, 3 = 5 - 2
+    sum = sum + p / q
+  }
+  console.log(sum.toFixed(4))
+</script>
+
+<script id="ch0105/33" type="1.5.33">
+  var n = +prompt()
+  var sum = 0
+
+  for (var i = 2; i <= n; i += 2) {
+    sum = sum + (1 / (i - 1) - 1 / i)
+  }
+  console.log(sum.toFixed(4))
 </script>
