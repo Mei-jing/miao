@@ -1064,3 +1064,142 @@ p + p + p + p + p+"\n" +
   }
   console.log(sum.toFixed(4))
 </script>
+
+<script id="ch0105/34" type="1.5.34">
+  var n = +prompt()
+  var sum = 0
+  var m = 1
+  debugger
+
+  for (var i = 0; i < n; i++) {
+    m = m * (i + 1)
+    sum = sum + m
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/35" type="1.5.35">
+  var n = +prompt()
+  var X = 0
+  var sum
+  var m = 1
+
+  for (var i = 0; i < n; i++) {
+    m = m * 1 / (i + 1)
+    X = X + m
+  }
+  sum = (X + 1).toFixed(10)
+  console.log(sum)
+</script>
+
+<script id="ch0105/36" type="1.5.36">
+  var x = +prompt()
+  var n = +prompt()
+  var sum = 0
+  var m
+
+  for (var i = n; i > 0; i--) {
+    m = Math.pow(x, i)
+    sum = sum + m
+  }
+  sum = (sum + 1).toFixed(2)
+  console.log(sum)
+</script>
+
+<script id="sort" sample-input="4 1 7" sample-output="1 4 7" comment="输入三个数，把此三个数按升序输出">
+  var a = +prompt()
+  var b = +prompt()
+  var c = +prompt()
+  var mid
+  debugger
+
+  //最小值放左边，最大值放右边
+
+  if (a > b) {
+    mid = a
+    a = b
+    b = mid
+  }
+  if (b > c) {
+    mid = b
+    b = c
+    c = mid
+  }
+  if (a > b) {
+    mid = a
+    a = b
+    b = mid
+  }
+
+  console.log(a, b, c)
+</script>
+
+题目：水仙花数。水仙花数是指一个N位的十进制数，其各位数的N次方的和等于它自己。
+如：153 =　1的三次方+5的三次方+3的三次方，则153就是一个水仙花数
+或：1634 =　1的四次方+6的四次方+3的四次方+4的四次方
+因为1634是一个四位数。
+找出100到100000以内所有的水仙花数。
+<script id="narcissistic " sample-input="153" sample-output="YES" comment="判断一个数是否为水仙花数">
+  var number = prompt()
+  var x = number
+  var result = 0
+  var a
+
+  for (var i = 0; i <number.length; i++) {
+    a = parseInt(x % 10)
+    result = result + Math.pow(a, number.length)
+    x = x / 10
+  }
+
+  if (result == number) {
+    console.log("Yes")
+  }
+</script>
+<script id="narcissistics" sample-input="" sample-output="" comment="找出100到10000以内所有的水仙花数">
+
+</script>
+<script id="palindrom" sample-input="12321" sample-output="YES" comment="判断一个非负整数是否为回文数字">
+
+</script>
+
+<script id="weekday" sample-input="2018 6" sample-output="5" comment="输入年份与月份，给出该年该月的第一天是星期几">
+
+</script>
+<script id="complete-number" sample-input="6" sample-output="YES" comment="判断一个数是否为完全数">
+
+</script>
+<script id="complete-numbers" sample-input="" sample-output="" comment="输出10000以内所有的完全数">
+
+</script>
+<script id="prime" sample-input="7" sample-output="YES" comment="判断一个数是否为素数">
+
+</script>
+<script id="primes" sample-input="" sample-output="" comment="输出100以内所有的素数">
+
+</script>
+<script id="itob" sample-input="123" sample-output="123" comment="数字转换成字符串，即实现Number函数的功能，不可使用+号或者Number函数">
+
+</script>
+<script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数">
+
+</script>
+
+题目：敲7。输出1到100以内所有7的倍数以及数字中包含7的数，如7（7的倍数），37（不是倍数但数位中包含7）都需要输出，依次类推
+<script id="7" sample-input="" sample-output="" comment="敲7，输出7的倍数或数位中含有7的数如（21，27）">
+
+</script>
+<script id="sqrt" sample-input="2" sample-output="1.414" comment="不使用Math.sqrt，求一个非负数的平方根，至少精确到小数点后3位">
+
+</script>
+
+给定M和N，求从M个物体中选出N个的排列与组合的数量：
+Ｃ（ｍ，ｎ）
+Ａ（ｍ，ｎ）
+<script id="c&a">
+
+</script>
+
+题目：给定一个数，对其进行四舍五入，如1.4输出1，1.6输出2
+<script id="round">
+
+</script>
