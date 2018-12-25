@@ -1083,7 +1083,7 @@ a=b-a  迭代
   debugger
 
   for (var i = 0; i < n; i++) {
-    m = m * (i + 1)
+    m = m * (i + 1)   //第i项 m 的阶乘
     sum = sum + m
   }
   console.log(sum)
@@ -1158,6 +1158,24 @@ for (var i = 1; i <= x; i++) {
   }
 }
 console.log(sum)
+
+
+/*
+// 此函数用来判断n的各个位上有是否出现过7
+// 出现过返回true
+// 没有出现过返回false
+var numDigitHas7 = function(n) {
+  while(n > 0) {
+    var digit = n % 10
+    if (digit == 7) {
+      return true
+    }
+    n = (n - digit) / 10
+  }
+  return false
+}
+*/
+
 </script>
 
 <script id="ch0105/43" type="1.5.43">
@@ -1170,7 +1188,7 @@ console.log(sum)
       if (n === i) { //当 n === i 则是最后一个整除的数也是最大的数 
         console.log(i)
       }
-      n = n / i
+      n = n / i     //若继续能够被 i 整除则继续整除
       i--
     }
   }
@@ -1352,15 +1370,65 @@ console.log(result)
   }
 </script>
 <script id="itob" sample-input="123" sample-output="123" comment="数字转换成字符串，即实现Number函数的功能，不可使用+号或者Number函数">
+  var str
+  var num = function (str) {
+    var c
+    var n = 0
+    for (var i = 0; i < str.length; i++) {
+      c = str[i] - "0"
+      n = n * 10 + c
+    }
+    return n
+  }
+str =+prompt()
 
 </script>
 <script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数">
+  var result = 1
+  var min_d
+  var Max_m_Min_d = function (m, n) {
+    var m
+    var n
+    for (var i = 2; i <= m && i <= n; i++) {
+      if (m % i == 0 && n % i == 0) {
+        result = result * i
+        n = n / i
+        m = m / i
+        i--
+      }
+      if (m === i || n === i) {
+        x = m
+        y = n
+        min_d = result * x * y
+      }
+    }
+    return result, min_d
+  }
 
+  var m = +prompt()
+  var n = +prompt()
+  if (Max_m_Min_d(m, n)) {
+    console.log(result, min_d)
+  }
 </script>
 
 题目：敲7。输出1到100以内所有7的倍数以及数字中包含7的数，如7（7的倍数），37（不是倍数但数位中包含7）都需要输出，依次类推
 <script id="7" sample-input="" sample-output="" comment="敲7，输出7的倍数或数位中含有7的数如（21，27）">
+  var numberDigitHas7 = function (n) {
+    while (n > 0) {
+      var digit = n % 10
+      if (digit == 7) {
+        numberDigitHas7 = true
+      }
+      n = (n - digit) / 10
+    }
+  }
 
+  for (var i = 1; i < 100; i++) {
+    if (i % 7 == 0 && numberDigitHas7 == true) {
+      console.log(i)
+    }
+  }
 </script>
 <script id="sqrt" sample-input="2" sample-output="1.414" comment="不使用Math.sqrt，求一个非负数的平方根，至少精确到小数点后3位">
 
