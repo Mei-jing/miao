@@ -1380,8 +1380,7 @@ console.log(result)
     }
     return n
   }
-str =+prompt()
-
+  str = +prompt()
 </script>
 <script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数">
   var result = 1
@@ -1444,4 +1443,149 @@ str =+prompt()
 题目：给定一个数，对其进行四舍五入，如1.4输出1，1.6输出2
 <script id="round">
 
+</script>
+
+
+
+
+
+
+<script 题目：把单词转换成拨号键盘上的数字。 如“dell”转换成3355.“alienware”转换成254369273>
+  var Alphabet2Number = function (Alphabet) {
+    var result = ""
+    var str = String(Alphabet)
+
+    for (var i = 0; i < str.length; i++) {
+      n = str[i]
+      var baby
+      switch (n) {
+        case "a":
+        case "b":
+        case "c":
+          baby = '2';
+          break;
+        case "d":
+        case "e":
+        case "f":
+          baby = '3';
+          break;
+        case "g":
+        case "i":
+        case "h":
+          baby = '4';
+          break;
+        case "j":
+        case "k":
+        case "l":
+          baby = '5';
+          break;
+        case "m":
+        case "n":
+        case "o":
+          baby = '6';
+          break;
+        case "p":
+        case "q":
+        case "s":
+        case "r":
+          baby = '7';
+          break;
+        case "t":
+        case "u":
+        case "v":
+          baby = '8';
+          break;
+        case "w":
+        case "x":
+        case "y":
+        case "z":
+          baby = '9';
+          break;
+      }
+      result = result + baby
+    }
+
+
+    return result
+  }
+</script>
+
+<script 题目：找出唯一的满足a + b + c = 1000的毕达哥拉斯三元组{a, b, c}。
+一个毕达哥拉斯三元组是一个包含三个自然数的集合，a<b<c，满足条件：
+a^2 + b^2 = c^2例如：3^2 + 4^2 = 9 + 16 = 25 = 5^2.（说白了就是一组勾股数）
+已知存在并且只存在一个毕达哥拉斯三元组满足条件a + b + c = 1000。
+找出这个三元组。
+题目中a^b代表a的b次方（这是一个通用表示法） 。
+>
+for(var a =0;a<1000;a++){
+  for(var b=0;b<1000;b++){
+    for(var c=0;c<1000;c++){
+      if(Math.pow(a,2)+Math.pow(b,2)==Math.pow(c,2)){
+        if(a+c+b==1000 && a<b &&b <c){
+          console.log(a,b,c)
+        }
+      }
+    }
+  }
+}
+</script>
+
+
+<script 题目：将一个数字的各位加起来求和。如果该和大于10，将得到这个数字继续进行这种操作，直到其只有一位数。>
+var num = prompt()
+var digit
+
+while (String(num).length != 1) {
+  var count = 0
+  var result = 0
+  var a = num
+  for (var i = 0; i < String(num).length; i++) {
+    digit = a % 10
+    count++
+    result = result + digit
+    a = (a - digit) / 10
+  }
+  if (count == String(num).length) {
+    num = result
+  }
+}
+
+if(String(num).length ==1){
+  result = num
+}
+
+console.log(result)
+
+
+
+
+
+/*  //声明的位置很重要    大括号内外   条件内部位置顺序
+var num = prompt()
+var digit
+var len = num.toString().length  //判断 while 条件
+
+while (len != 1) {
+  len = num.toString().length   //判断大括号里面的条件。且必须在 result 被赋值为0之前
+  var count = 0
+  var result = 0
+  var a = num
+  for (var i = 0; i < len; i++) {
+    digit = a % 10
+    count++
+    result = result + digit
+    a = (a - digit) / 10
+  }
+  if (count == len) {
+    num = result
+  }
+}
+
+if(len ==1){
+  result = num
+}
+
+console.log(result)
+
+*/
 </script>
