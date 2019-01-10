@@ -1,13 +1,17 @@
-var mei_jing = function(){
-  
-  function chunk(ary, size = 1) {
+var mei_jing = function () {
 
-  }
-  function compact(ary) {
+  function chunk(ary, size = 1) {
     let result = []
     for(let i =0;i<ary.length;i++){
-      if(ary[i]){
-         result.push(i)
+
+    }
+  }
+
+  function compact(ary) {
+    let result = []
+    for (let i = 0; i < ary.length; i++) {
+      if (ary[i]) {
+        result.push(ary[i])
       }
     }
     return result
