@@ -4,12 +4,13 @@ var mei_jing = function(){
 
   }
   function compact(ary) {
+    let result = []
     for(let i =0;i<ary.length;i++){
-      if(ary[i] == 0 || ary[i] == null || ary[i] == "" || ary[i] == undefined ){
-         ary.splice(i,1)
+      if(ary[i]){
+         result.push(i)
       }
     }
-    return ary
+    return result
   }
 
   return {
