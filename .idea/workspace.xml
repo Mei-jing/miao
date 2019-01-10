@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53d04e95-db1f-41d0-954d-a5b586a09345" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/noi.html" beforeDir="false" afterPath="$PROJECT_DIR$/noi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paint.html" beforeDir="false" afterPath="$PROJECT_DIR$/paint.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -133,11 +133,12 @@
       <workItem from="1545208985604" duration="1360000" />
       <workItem from="1545213462607" duration="3130000" />
       <workItem from="1545317670273" duration="9000" />
+      <workItem from="1546605707204" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86170000" />
+    <option name="totallyTimeSpent" value="86177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1273" y="0" width="1294" height="1417" extended-state="0" />

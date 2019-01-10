@@ -96,59 +96,68 @@
 
   for (var x = 0; x < 50; x++) {
     for (var y = 0; y < 50; y++) {
-        var m = x * 255 / 50
-        var n = y * 255 / 50
-        var c = "rgb(" + m + "," + n + "," + 255 + ")"
-        dot(x + 50, y + 170, c)
+      var m = x * 255 / 50
+      var n = y * 255 / 50
+      var c = "rgb(" + m + "," + n + "," + 255 + ")"
+      dot(x + 50, y + 170, c)
     }
   }
 
-  for(var x =0;x<100;x++){
+  for (var x = 0; x < 100; x++) {
     var r = 71
-    dot(x+200,y=Math.sqrt(r*r-(x-50)*(x-50))+150)
-    dot(x+200,y=-Math.sqrt(r*r-(x-50)*(x-50))+150)
-    dot(y=Math.sqrt(r*r-(x-50)*(x-50))+250,x+100)
-    dot(y=-Math.sqrt(r*r-(x-50)*(x-50))+250,x+100)
+    dot(x + 200, y = Math.sqrt(r * r - (x - 50) * (x - 50)) + 150)
+    dot(x + 200, y = -Math.sqrt(r * r - (x - 50) * (x - 50)) + 150)
+    dot(y = Math.sqrt(r * r - (x - 50) * (x - 50)) + 250, x + 100)
+    dot(y = -Math.sqrt(r * r - (x - 50) * (x - 50)) + 250, x + 100)
   }
 
-  for(var x =0;x<200;x++){
+  for (var x = 0; x < 200; x++) {
     var r = 29
-    var y =Math.sqrt(r*r-(x-50)*(x-50))
-    dot(x+200,y+150)
-    dot(x+200,y+150)
-    dot(y+250,x+100)
-    dot(y+250,x+100)
-    if (Math.sqrt(Math.pow(200 - x, 2) + Math.pow(150 - y, 2)) <= 29) {
-              dot(x, y)
-          }
+    var y = Math.sqrt(r * r - (x - 50) * (x - 50))
+    dot(x + 200, y + 150)
+    dot(x + 200, y + 150)
+    dot(y + 250, x + 100)
+    dot(y + 250, x + 100)
+    if (Math.sqrt(Math.pow(150 - x, 2) + Math.pow(50 - y, 2)) <= 29) {
+      dot(x, y)
+    }
   }
 
- for (var x = 250; x <= 350; x += 1) {
-      for (var y = 50; y <= 150; y += 1) {
-          if (Math.sqrt(Math.pow(300 - x, 2) + Math.pow(100 - y, 2)) <= 29) {
-              dot(x, y, 'violet')
-          }
+  for (var x = 300; x <= 4500; x += 1) {
+    for (var y = 178; y <= 278; y += 1) {
+      if (Math.sqrt(Math.pow(350 - x, 2) + Math.pow(228 - y, 2)) <= 29) {
+        dot(x, y, 'violet')
       }
+    }
   }
 
-  for(var x = 0; x<400; x++) {
+  for (var x = 0; x < 400; x++) {
     var y = 10 * Math.sin(x / 10)
-    dot(x, y + 250,'blue')
+    dot(x, y + 250, 'blue')
   }
- 
 
 
 
+  function line(x1,y1,x2,y2) {
+    if (x2 > x1) {
+      for(var x = x1; x<=x2; x+=0.1) {
+        var y = y1 + (y2 - y1) * (x - x1) / (x2 - x1)
+        dot(x, y, 'black') 
+      }
+    } else {
+      for(var x = x2; x<=x1; x += 0.1) {
+        var y = y2 + (y1 - y2) * (x - x2) / (x1 - x2)
+        dot(x, y, 'black') 
+      }
+    }
+  }
 
-
-
-
-
-
-
-
-
-
+  for(var y = 25; y < 150; y++) {
+    var half = Math.sqrt(25 * 25 - (81- y) * (81- y)) | 0
+    var x1 = 150 - half
+    var x2 = 150 + half
+    line(x1,y, x2,y)
+  }
 
 
 
