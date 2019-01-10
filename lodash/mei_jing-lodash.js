@@ -15,6 +15,6 @@ var mei_jing = function(){
 
   return {
     chunk: chunk,
-    compact: result,
+    compact: compact,
   }
 }()
