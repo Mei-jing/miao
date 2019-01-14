@@ -39,15 +39,44 @@ var mei_jing = function () {
     return mid
   }
 
+  function flatten(array) {
+    return array.reduce((result, currItem) => {
+      result = result.concat(currItem)
+      return result
+    }, [])
+  }
 
 
+  function flattenDeep(array) {
+    return array.reduce((result, currItem) => {
+      count++
+      result = result.concat(currItem)
+      if (!Array.isArray(currItem)) {
+        return result
+      }
+      return flattenDeep(result)
+    }, [])
+  }
 
+  function flattenDepth(array, depth = 1) {
+    return array.reduce((result, currItem) => {
+      result = result.concat(currItem)
 
+      if (Array.isArray(currItem) && depth > 1) {
+        return flattenDepth(result, --depth)
+      } else {
+        return result
+      }
+    }, [])
+  }
 
 
   return {
     concat: concat,
     chunk: chunk,
     compact: compact,
+    flatten: flatten,
+    flattenDeep: flattenDeep,
+    flattenDepth: flattenDepth,
   }
 }()
