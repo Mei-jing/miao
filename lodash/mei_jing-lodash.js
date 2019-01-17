@@ -2,11 +2,8 @@ var mei_jing = function () {
 
   function chunk(ary, size = 1) {
     let result = []
-    for (let i = 0; i < ary.length; i++) {
-      result.push(ary.splice(i, i + size))
-      if (ary.length < size) {
-        result.push(ary)
-      }
+    for (let i = 0; i < ary.length; i += size) {
+      result.push(ary.slice(i, i + size))
     }
     return result
   }
@@ -70,6 +67,57 @@ var mei_jing = function () {
     }, [])
   }
 
+  function difference(ary, ...values) {
+    let result = []
+    var args = [].concat(...values)
+    for (let j = 0; j < ary.length; j++) {
+      if (!args.includes(ary[j])) {
+        result.push(ary[j])
+      }
+    }
+    return result
+  }
+
+  function drop(ary, n = 1) {
+    let result = []
+    result.push(ary.slice(n))
+    return result
+  }
+
+  function dropRight(ary, n = 1) {
+    let result = []
+    let count = 0
+    if(n>ary.length){
+      return []
+    }
+    if(n == 0){
+      return ary
+    }
+    while (count < n) {
+      result.push(ary.shift())
+      count++
+    }
+    return result
+  }
+
+  function fill(array, value, start = 0, end = array.length) {
+    for (let i = start; i < end; i++) {
+      array[i] = value
+    }
+    return array
+  }
+
+  function fromPairs(pairs) {
+    let map = {}
+    if (!pairs) {
+      return {}
+    }
+    for (let i = 0; i < pairs.length; i++) {
+        map[pairs[i][0]] = pairs[i][1]
+    }
+    return map
+  }
+
 
   return {
     concat: concat,
@@ -78,6 +126,11 @@ var mei_jing = function () {
     flatten: flatten,
     flattenDeep: flattenDeep,
     flattenDepth: flattenDepth,
+    difference:difference,
+    drop:drop,
+    dropRight:dropRight,
+    fill:fill,
+    fromPairs:fromPairs,
   }
   
 }()
