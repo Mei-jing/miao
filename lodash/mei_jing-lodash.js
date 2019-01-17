@@ -110,6 +110,39 @@ var mei_jing = function () {
     return map
   }
 
+  function head(array) {
+    if (array.length == 0) {
+      return undefined
+    } else {
+      return array[0]
+    }
+  }
+
+  function indexOf(array, value, fromIndex = 0) {
+    if (!array || fromIndex > array.length) {
+      return undefined
+    }
+    for (let i = fromIndex; i < array.length; i++) {
+      if (array[i] == value) {
+        return i
+      }
+    }
+  }
+
+  function initial(array){
+    array.pop()
+    return array
+  }
+
+  function intersection([arrays]) {
+    let result = []
+    for (let i = 0; i < argument[1].length; i++) {
+      for (argument[1][i] of argument[0]) {
+        return result.push(argument[0].indexOf(argument[1][i]))
+      }
+    }
+  }
+
 
   return {
     concat: concat,
@@ -123,6 +156,10 @@ var mei_jing = function () {
     dropRight: dropRight,
     fill: fill,
     fromPairs: fromPairs,
+    head:head,
+    indexOf:indexOf,
+    initial:initial,
+    intersection:intersection,
   }
 
 }()
