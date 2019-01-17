@@ -79,25 +79,17 @@ var mei_jing = function () {
   }
 
   function drop(ary, n = 1) {
-    let result = []
-    result.push(ary.slice(n))
+    let result = [].concat(ary.slice(n))
     return result
   }
 
   function dropRight(ary, n = 1) {
-    let result = []
-    let count = 0
-    if(n>ary.length){
-      return []
-    }
     if(n == 0){
       return ary
     }
-    while (count < n) {
-      result.push(ary.shift())
-      count++
-    }
-    return result
+    let m = -n
+    ary.splice(m)
+    return ary
   }
 
   function fill(array, value, start = 0, end = array.length) {
@@ -113,7 +105,7 @@ var mei_jing = function () {
       return {}
     }
     for (let i = 0; i < pairs.length; i++) {
-        map[pairs[i][0]] = pairs[i][1]
+      map[pairs[i][0]] = pairs[i][1]
     }
     return map
   }
@@ -126,11 +118,11 @@ var mei_jing = function () {
     flatten: flatten,
     flattenDeep: flattenDeep,
     flattenDepth: flattenDepth,
-    difference:difference,
-    drop:drop,
-    dropRight:dropRight,
-    fill:fill,
-    fromPairs:fromPairs,
+    difference: difference,
+    drop: drop,
+    dropRight: dropRight,
+    fill: fill,
+    fromPairs: fromPairs,
   }
-  
+
 }()
