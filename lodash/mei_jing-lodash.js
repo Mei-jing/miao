@@ -84,7 +84,7 @@ var mei_jing = function () {
   }
 
   function dropRight(ary, n = 1) {
-    if(n == 0){
+    if (n == 0) {
       return ary
     }
     let m = -n
@@ -129,18 +129,61 @@ var mei_jing = function () {
     }
   }
 
-  function initial(array){
+  function lastIndexOf(array, value, fromIndex = array.length - 1) {
+    if (!array || fromIndex > array.length) {
+      return undefined
+    }
+    for (let i = fromIndex; i >= 0; i--) {
+      if (array[i] == value) {
+        return i
+      }
+    }
+  }
+
+  function initial(array) {
     array.pop()
     return array
   }
 
   function intersection([arrays]) {
     let result = []
-    for (let i = 0; i < argument[1].length; i++) {
-      for (argument[1][i] of argument[0]) {
-        return result.push(argument[0].indexOf(argument[1][i]))
+    for (let i = 0; i < arguments[1].length; i++) {
+      for (arguments[1][i] of arguments[0]) {
+        return result.push(arguments[0].indexOf(arguments[1][i]))
       }
     }
+  }
+
+  function join(array, separator = ',') {
+    let str = ""
+    for (let i = 0; i < array.length - 1; i++) {
+      str = str + array[i]
+      if (1 != array.length - 1) {
+        str = str + separator
+      }
+    }
+    return str
+  }
+
+  function last(array) {
+    return array[array.length - 1]
+  }
+
+  function pull(array, ...values) {
+    let map = {}
+    let result = []
+    for (let item of values) {
+      if (!map[item]) {
+        map[item] = 1
+      }
+    }
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] in map) {
+        array.splice(i, 1)
+        i--
+      }
+    }
+    return array
   }
 
 
@@ -156,10 +199,14 @@ var mei_jing = function () {
     dropRight: dropRight,
     fill: fill,
     fromPairs: fromPairs,
-    head:head,
-    indexOf:indexOf,
-    initial:initial,
-    intersection:intersection,
+    head: head,
+    indexOf: indexOf,
+    initial: initial,
+    intersection: intersection,
+    join: join,
+    last: last,
+    lastIndexOf: lastIndexOf,
+    pull: pull,
   }
 
 }()
