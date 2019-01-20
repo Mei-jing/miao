@@ -138,6 +138,7 @@ var mei_jing = function () {
         return i
       }
     }
+    return -1
   }
 
   function initial(array) {
@@ -146,19 +147,14 @@ var mei_jing = function () {
   }
 
   function intersection([arrays]) {
-    let result = []
-    for (let i = 0; i < arguments[1].length; i++) {
-      for (arguments[1][i] of arguments[0]) {
-        return result.push(arguments[0].indexOf(arguments[1][i]))
-      }
-    }
+    return arguments[0].filter(value => arguments[1].indexOf(value) !== -1)
   }
 
   function join(array, separator = ',') {
     let str = ""
-    for (let i = 0; i < array.length - 1; i++) {
+    for (let i = 0; i < array.length; i++) {
       str = str + array[i]
-      if (1 != array.length - 1) {
+      if (i != array.length - 1) {
         str = str + separator
       }
     }
@@ -186,6 +182,64 @@ var mei_jing = function () {
     return array
   }
 
+  function reverse(array) {
+    let count = 0
+    for (let i = 0, j = array.length - 1; i < j; i++, j--) {
+      if (count < (array.length % 2 >> 0)) {
+        array[i] = array[i] ^ array[j]
+        array[j] = array[i] ^ array[j]
+        array[i] = array[i] ^ array[j]
+        count++
+      }
+    }
+    return array
+  }
+
+  function sortedIndex(array, value) {
+    for (let i = 0; i < array.length; i++) {
+      if (value >= array[i]) {
+        return i + 1
+      }
+    }
+  }
+
+  function union(...arrays) {
+    let result = []
+    //  let arr = [].concat.apply([], arguments) 不用 ... 的写法
+    let arr = [].concat(...arrays)
+    for (let i = 0; i < arr.length; i++) {
+      if (result.indexOf(arr[i]) == -1) {
+        result.push(arr[i])
+      }
+    }
+    return result
+  }
+
+  function zip(...arrays) {
+    // let result1 = []
+    // let result2 = []
+    // let result = []
+    // for (let i = 0; i < arguments.length; i++) {
+    //   result1.push(arguments[i][0])
+    //   result2.push(arguments[i][1])
+    // }
+    // result.push(result1)
+    // result.push(result2)
+    // return result
+  
+    
+    let result = []
+    for (let i = 0; i < arguments[0].length; i++){
+      let arr = []
+      for(let index of arguments){
+        arr.push(index[i])
+      }
+      result.push(arr)
+    }
+    return result
+  }
+  
+
 
   return {
     concat: concat,
@@ -207,6 +261,10 @@ var mei_jing = function () {
     last: last,
     lastIndexOf: lastIndexOf,
     pull: pull,
+    reverse: reverse,
+    sortedIndex: sortedIndex,
+    union: union,
+    zip: zip,
   }
 
 }()
