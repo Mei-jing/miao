@@ -226,19 +226,109 @@ var mei_jing = function () {
     // result.push(result1)
     // result.push(result2)
     // return result
-  
-    
+
+
     let result = []
-    for (let i = 0; i < arguments[0].length; i++){
+    for (let i = 0; i < arguments[0].length; i++) {
       let arr = []
-      for(let index of arguments){
+      for (let index of arguments) {
         arr.push(index[i])
       }
       result.push(arr)
     }
     return result
   }
-  
+
+  function unzip(...arrays) {
+    let result = []
+    for (let i = 0; i < arguments[0][0].length; i++) {
+      let arr = []
+      for (let index of arguments[0]) {
+        arr.push(index[i])
+      }
+      result.push(arr)
+    }
+    return result
+  }
+
+  function uniq(array) {
+    let map = {}
+    let result = []
+    for (let i = 0; i < array.length; i++) {
+      if (!map[array[i]]) {
+        result.push(array[i])
+        map[array[i]] = 1
+      }
+    }
+    return result
+  }
+
+  function without(array, ...values) {
+    let arr = Array.from(values)
+    return array.reduce((result, currItem) => {
+      return array.filter(values => arr.indexOf(values) == -1)
+    }, [])
+  }
+
+  function xor(arrays) {
+    return arrays.reduce((result, currItem) => arguments[0].filter(values => arguments[1].indexOf(values) == -1).concat(arguments[1].filter(values => arguments[0].indexOf(values))), [])
+  }
+
+  function forEach(collection, iteratee) {
+    for (let key in collection) {
+      iteratee(collection[key])
+    }
+    return collection
+  }
+
+  function map(collection, iteratee) {
+    let result = []
+    for (var currItem in collection) {
+      result.push(iteratee(collection[currItem]))
+    }
+    return result
+  }
+
+  function isBoolean(value) {
+    if (value === true || value === false) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function isEmpty(value) {
+    if (value == null) {
+      return true
+    } else if (typeof value == "number") {
+      return true
+    } else if (typeof value == "boolean") {
+      return true
+    } else if (arguments[0].length !== 0 || arguments[0].size !== 0) {
+      return false
+    }
+  }
+
+  function toArray(value) {
+    let result = []
+    if (value == null) {
+      return []
+    } else if (typeof value == "number") {
+      return []
+    } else if (typeof value == "boolean") {
+      return []
+    } else if (typeof value == "object") {
+      for (let i in value) {
+        result.push(value[i])
+      }
+      return result
+    } else if (typeof value == "string") {
+      return value.split("")
+    }
+  }
+
+
+
 
 
   return {
@@ -265,6 +355,15 @@ var mei_jing = function () {
     sortedIndex: sortedIndex,
     union: union,
     zip: zip,
+    unzip: unzip,
+    uniq: uniq,
+    without: without,
+    xor: xor,
+    forEach: forEach,
+    map: map,
+    isBoolean: isBoolean,
+    isEmpty: isEmpty,
+    toArray: toArray,
   }
 
 }()
