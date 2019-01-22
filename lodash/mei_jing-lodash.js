@@ -327,7 +327,14 @@ var mei_jing = function () {
     }
   }
 
-
+  function forOwn(a, iterator) {
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var prop in a) {
+      if (hasOwn.call(a, prop)) {
+        iterator(a, prop) // 属性值，属性名，对象
+      }
+    }
+  }
 
 
 
@@ -364,6 +371,7 @@ var mei_jing = function () {
     isBoolean: isBoolean,
     isEmpty: isEmpty,
     toArray: toArray,
+    forOwn: forOwn,
   }
 
 }()
