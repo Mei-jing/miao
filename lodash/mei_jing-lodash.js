@@ -336,6 +336,24 @@ var mei_jing = function () {
     }
   }
 
+  function findIndex(array, predicate = identity, fromIndex = 0) {
+    for (let i = fromIndex; i < array.length; i++) {
+      if (predicate(array[i], i, array)) {
+        return i
+      }
+    }
+    return -1
+  }
+
+  function findLastIndex(array, predicate = identity, fromIndex = array.length - 1) {
+    for (let i = fromIndex; i >= 0; i--) {
+      if (predicate(array[i], i, array)) {
+        return i
+      }
+    }
+    return -1
+  }
+
 
 
   return {
@@ -372,6 +390,8 @@ var mei_jing = function () {
     isEmpty: isEmpty,
     toArray: toArray,
     forOwn: forOwn,
+    findIndex:findIndex,
+    findLastIndex:findLastIndex,
   }
 
 }()
