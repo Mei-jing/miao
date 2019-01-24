@@ -336,28 +336,57 @@ var mei_jing = function () {
     }
   }
 
-  function baseFindIndex(array, predicate, fromIndex = 0) {
-    for (let i = fromIndex; i < array.length; i++) {
-      if (predicate(array[i], i, array)) {
-        return i
+  function typeJudge(obj) {
+    return result = Object.prototype.toString.call(obj)
+  }
+
+  function oneINone(obj) {
+    if (typeJudge(obj) == "[object Function]") {
+      return obj
+    } else if (typeJudge(obj) == "[object String]") {
+      return users => {
+        if (users[obj]) {
+          return true
+        } else {
+          return false
+        }
+      }
+    } else if (typeJudge(obj) == "[object Array]") {
+      return users => {
+        for (let i = 1; i < obj.length; i += 2) { //这个想了半天，大佬就是牛逼
+          if (obj[i] !== users[obj[i - 1]]) {
+            return false
+          }
+        }
+        return true
+      }
+    } else if (typeJudge(obj) == "[object Object]") {
+      return users => {
+        for (let i in obj) {
+          if (obj[i] !== users[i]) {
+            return false
+          }
+        }
+        return true
       }
     }
+    return -1
   }
-  
-  function findIndex(array, predicate = identity, fromIndex = 0) {
-    let predicate = baseFindIndex(predicate)
+
+  function findIndex(array, predicate, fromIndex = 0) {
+    let fn = oneINone(predicate)
     for (let i = fromIndex; i < array.length; i++) {
-      if (predicate(array[i], i, array)) {
+      if (fn(array[i])) {
         return i
       }
     }
     return -1
   }
-  
-  function findLastIndex(array, predicate = identity, fromIndex = array.length - 1) {
-    let predicate = baseFindIndex(predicate)
+
+  function findLastIndex(array, predicate, fromIndex = array.length - 1) {
+    let fn = oneINone(predicate)
     for (let i = fromIndex; i >= 0; i--) {
-      if (predicate(array[i], i, array)) {
+      if (fn(array[i])) {
         return i
       }
     }
@@ -400,8 +429,8 @@ var mei_jing = function () {
     isEmpty: isEmpty,
     toArray: toArray,
     forOwn: forOwn,
-    findIndex:findIndex,
-    findLastIndex:findLastIndex,
+    findIndex: findIndex,
+    findLastIndex: findLastIndex,
   }
 
 }()
